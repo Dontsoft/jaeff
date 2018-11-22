@@ -1,0 +1,58 @@
+@import "../node_modules/normalize.css/normalize.css";
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro');
+
+$light: #FFFFFF !default;
+$dark: #262626 !default;
+$primary: #4392F1 !default;
+$error: #DC493A !default;
+$default-border-radius: 2px !default;
+
+@mixin box-sizing($sizing) {
+   -webkit-box-sizing: $sizing;
+   -moz-box-sizing: $sizing;
+   box-sizing: $sizing;
+}
+
+@mixin box-shadow($shadow) {
+   -webkit-box-shadow: $shadow;
+   -moz-box-shadow: $shadow;
+   box-shadow: $shadow;
+}
+
+@mixin box-shadow2($shadow1, $shadow2) {
+   -webkit-box-shadow: $shadow1, $shadow2;
+   -moz-box-shadow: $shadow1, $shadow2;
+   box-shadow: $shadow1, $shadow2;
+}
+
+@mixin transition($transition) {
+   -webkit-transition: $transition;
+   -moz-transition: $transition;
+   transition: $transition;
+}
+
+*,
+*:before,
+*:after {
+   @include box-sizing(border-box);
+   @include transition(all 300ms);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+@for $i from 1 through 6 {
+   h#{$i} {
+      font-family: 'Lato', sans-serif;
+   }
+}
+
+body {
+   max-width: 100vw;
+   min-height: 100vh;
+}
+
+@import "./layouts/flex.scss";
+@import "./layouts/grid.scss";
+
+@import "./components/buttons.scss";
+@import "./components/cards.scss";

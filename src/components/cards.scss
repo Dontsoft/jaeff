@@ -1,0 +1,9 @@
+.card {
+   border-radius: $default-border-radius;
+   margin: 16px;
+   padding: 16px;
+   @include box-shadow2(0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24));
+   &.with-hover:hover, &.with-hover:focus {
+      @include box-shadow2(0 4px 6px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.22));
+   }
+}
