@@ -1,0 +1,23 @@
+{
+  "name": "jaeff",
+  "version": "1.0.0",
+  "description": "Just Another Extraterrestrial Frontend Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Dontsoft/jaeff.git"
+  },
+  "author": "Artem Dontsov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dontsoft/jaeff/issues"
+  },
+  "homepage": "https://github.com/Dontsoft/jaeff#readme",
+  "dependencies": {
+    "node-sass": "^4.10.0"
+  }
+}
