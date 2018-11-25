@@ -1,0 +1,53 @@
+@mixin checkbox-size {
+   width: 100%;
+   height: 30px;
+   line-height: 30px;
+   padding-left: 30px;
+}
+
+&.checkbox-input-wrapper > input[type="checkbox"] {
+   display: none;
+   & + label {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      @include checkbox-size();
+   }
+
+   & + label::before {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      text-align: center;
+      height: 18px;
+      width: 18px;
+      left: 0;
+      top: 6px;
+      border-radius: $default-border-radius;
+      border: 1px solid $primary;
+      background-color: transparent;
+      background-position: center;
+      background-size: cover;
+   }
+
+   &:checked + label::before {
+      background-color: $primary;
+      @include svg-icon("add", $light);
+   }
+
+   &.checkmark:checked + label::before {
+      @include svg-icon("done", $light);
+   }
+
+   &:indeterminate + label::before {
+      background-color: $primary;
+      @include svg-icon("remove", $light);
+   }
+
+   &:disabled + label {
+      color: rgba($dark, 0.4);
+   }
+   &:disabled + label::before {
+      border: 1px solid rgba($dark, 0.4);
+   }
+}

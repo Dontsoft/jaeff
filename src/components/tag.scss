@@ -1,0 +1,44 @@
+@mixin tag-mixin($color) {
+   background-color: rgba($color, 0.4);
+   &:hover, &.selected {
+      background-color: rgba($color, 0.8);
+   }
+}
+
+.tag {
+   display: inline-block;
+   height: 18px;
+   line-height: 18px;
+   padding: 0 6px;
+   margin: 0 6px;
+   font-size: 11px;
+   border-radius: 9px;
+   text-align: center;
+   cursor: pointer;
+   @include tag-mixin($primary);
+   
+   &.data-viz-1 {
+      @include tag-mixin($data-viz-1);
+   }
+
+   &.data-viz-2 {
+      @include tag-mixin($data-viz-2);
+   }
+
+   &.data-viz-3 {
+      @include tag-mixin($data-viz-3);
+   }
+
+   &.data-viz-4 {
+      @include tag-mixin($data-viz-4);
+   }
+
+   &.data-viz-5 {
+      @include tag-mixin($data-viz-5);
+   }
+   
+   &.data-viz-6 {
+      @include tag-mixin($data-viz-6);
+   }
+
+}

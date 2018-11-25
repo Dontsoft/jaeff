@@ -1,0 +1,44 @@
+@mixin radio-size {
+   width: 100%;
+   height: 30px;
+   line-height: 30px;
+   padding-left: 30px;
+}
+
+&.radio-input-wrapper > input[type="radio"].radio {
+   display: none;
+   
+   & + label {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      @include radio-size();
+   }
+
+   & + label::before {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      text-align: center;
+      height: 18px;
+      width: 18px;
+      left: 0;
+      top: 6px;
+      border-radius: 9px;
+      border: 1px solid $primary;
+      background-color: transparent;
+      background-position: center;
+      background-size: cover;
+   }
+
+   &:checked + label::before {
+      @include svg-icon("circle", $primary);
+   }
+   
+   &:disabled + label {
+      color: rgba($dark, 0.4);
+   }
+   &:disabled + label::before {
+      border: 1px solid rgba($dark, 0.4);
+   }
+}
