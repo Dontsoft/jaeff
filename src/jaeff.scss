@@ -1,6 +1,7 @@
 @import "../node_modules/normalize.css/normalize.css";
 
-@import url('https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro');
+@import "./fonts/Lato/stylesheet.css";
+@import "./fonts/SourceSansPro/stylesheet.css";
 
 $light: #FFFFFF !default;
 $dark: #262626 !default;
