@@ -5,10 +5,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry:  ['./src/index.js', './src/jaeff.scss' ],
+  entry:  {
+    jaeff: './src/index.js',
+    "jaeff-fonts": './src/jaeff-fonts.scss'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'jaeff.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -38,7 +41,7 @@ module.exports = {
   plugins: [ 
     new CleanWebpackPlugin('dist', {} ),
     new MiniCssExtractPlugin({
-      filename: 'jaeff.css',
+      filename: '[name].css',
     }),
     new WebpackMd5Hash()
   ]

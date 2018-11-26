@@ -7,10 +7,13 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
-  entry:  ['./src/index.js', './src/jaeff.scss' ],
+  entry:  {
+    jaeff: './src/index.js',
+    "jaeff-fonts": './src/jaeff-fonts.scss'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'jaeff.js'
+    filename: '[name].js'
   },
   optimization: {
    minimizer: [
@@ -55,7 +58,7 @@ module.exports = {
   plugins: [ 
     new CleanWebpackPlugin('dist', {} ),
     new MiniCssExtractPlugin({
-      filename: 'jaeff.css',
+      filename: '[name].css',
     }),
     new WebpackMd5Hash()
   ]
