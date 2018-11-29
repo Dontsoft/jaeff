@@ -1,10 +1,6 @@
 @mixin flex-base {
    display: -webkit-flex;
    display: flex;
-
-   & > * {
-      display: inline-block;
-   }
 }
 
 .row {
