@@ -34,7 +34,7 @@
    border-radius: $default-border-radius;
    border: 1px solid transparent;
    cursor: pointer;
-
+   white-space: nowrap;
    &.slim {
       height: 36px;
       min-width: 78px;
