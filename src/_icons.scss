@@ -12,4 +12,16 @@
    @if $id == "circle" {
       background-image: url(svg-inline('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><circle cx="24" cy="24" r="16" style="fill:' + $color + '"/></svg>'));
    }
+   @if $id == "up" {
+      background-image: url(svg-inline('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M33.18,32,24,22.84,14.82,32,12,29.18l12-12,12,12Z" style="fill:' + $color + '"/></svg>'));
+   }
+   @if $id == "right" {
+      background-image: url(svg-inline('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M16.59,33.77l9.16-9.18-9.16-9.18,2.82-2.82,12,12-12,12Z" style="fill:' + $color + '"/></svg>'));
+   }
+   @if $id == "down" {
+      background-image: url(svg-inline('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M14.82,17.18,24,26.34l9.18-9.16L36,20,24,32,12,20Z" style="fill:' + $color + '"/></svg>'));
+   }
+   @if $id == "left" {
+      background-image: url(svg-inline('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M31.41,15.41l-9.16,9.18,9.16,9.18-2.82,2.82-12-12,12-12Z" style="fill:' + $color + '"/></svg>'));
+   }
 }

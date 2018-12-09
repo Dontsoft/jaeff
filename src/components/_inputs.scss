@@ -20,14 +20,14 @@
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
       border: none;
-      border-bottom: 1px solid rgba($dark, 0.8);
+      border-bottom: 1px solid rgba($dark, 0.4);
       &:hover, &:focus {
-         border-bottom: 2px solid $primary;
+         border-bottom: 1px solid $primary;
       }
    
       &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
          box-shadow: none;
-         border-bottom: 2px solid $error;
+         border-bottom: 1px solid $error;
       }
    }
 
@@ -40,15 +40,15 @@
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
       border: none;
-      border-bottom: 1px solid rgba($dark, 0.8);
+      border-bottom: 1px solid rgba($dark, 0.4);
       resize: vertical;
       &:hover, &:focus {
-         border-bottom: 2px solid $primary;
+         border-bottom: 1px solid $primary;
       }
    
       &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
          box-shadow: none;
-         border-bottom: 2px solid $error;
+         border-bottom: 1px solid $error;
       }
    }
 }
@@ -75,14 +75,14 @@
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
       border: none;
-      border-bottom: 1px solid rgba($dark, 0.8);
+      border-bottom: 1px solid rgba($dark, 0.4);
       &:hover, &:focus {
-         border-bottom: 2px solid $primary;
+         border-bottom: 1px solid $primary;
       }
    
       &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
          box-shadow: none;
-         border-bottom: 2px solid $error;
+         border-bottom: 1px solid $error;
       }
    }
 }
