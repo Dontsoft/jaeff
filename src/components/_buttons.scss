@@ -1,6 +1,5 @@
-@mixin btn-color($classname, $background, $text) {
-   &.#{$classname} {
-      background-color: $background;
+@mixin btn-color($background, $text) {
+   background-color: $background;
       color: $text;
       &:hover, &:focus {
          background-color: darken($background, 10);
@@ -17,7 +16,6 @@
             color: $text;
          }
       }
-   }
 }
 
 .btn {
@@ -41,6 +39,11 @@
       line-height: 36px;
    }
 
-   @include btn-color(primary, $primary, $light);
-   @include btn-color(error, $error, $light);
+   &.primary {
+      @include btn-color($primary, $light);
+   }
+
+   &.error {
+      @include btn-color($error, $light);
+   }
 }
