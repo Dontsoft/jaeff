@@ -413,8 +413,6 @@ body {
    color: $light;
 }
 
-@prefix jaeff;
-
 @import "./layouts/flex.scss";
 @import "./layouts/grid.scss";
 
@@ -430,5 +428,3 @@ body {
 }
 
 @import "./components/tag.scss";
-
-@prefix;
