@@ -1,1 +1,1 @@
-require('./jaeff.scss');
+require("@babel/polyfill");
