@@ -1,7 +1,7 @@
 {
   "name": "jaeff",
   "version": "1.0.0",
-  "description": "Just Another Extraterrestrial Frontend Framework",
+  "description": "Just Another Easy Frontend Framework",
   "main": "src/jaeff.scss",
   "scripts": {},
   "repository": {
