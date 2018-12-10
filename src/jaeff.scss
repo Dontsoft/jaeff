@@ -397,6 +397,18 @@ $default-border-radius: 2px !default;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+input, button, select, textarea {
+  outline: none;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+option:not(:checked) {
+color: black; /* prevent <option>s from becoming transparent as well */
+}
+
 @for $i from 1 through 6 {
    h#{$i} {
       font-family: 'Lato', sans-serif;
@@ -413,18 +425,22 @@ body {
    color: $light;
 }
 
-@import "./layouts/flex.scss";
-@import "./layouts/grid.scss";
+@import "./layouts/flex";
+@import "./layouts/grid";
 
-@import "./components/buttons.scss";
-@import "./components/cards.scss";
+@import "./components/buttons";
+@import "./components/cards";
 
 .form-item {
-   margin: 6px 0;
-   position: relative;
-   @import "./components/checkbox.scss";
-   @import "./components/radiobutton.scss";
-   @import "./components/inputs.scss";
+  margin: 6px 0;
+  position: relative;
+  width: 100%;
+
+  @import "./components/checkbox";
+  @import "./components/dropdown";
+  @import "./components/inputs";
+  @import "./components/radiobutton";
+  @import "./components/select";
 }
 
-@import "./components/tag.scss";
+@import "./components/tag";
