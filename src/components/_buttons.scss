@@ -1,21 +1,35 @@
 @mixin btn-color($background, $text) {
    background-color: $background;
-      color: $text;
+   color: $text;
+   border-bottom: 2px solid darken($background, 20);
+   &:hover, &:focus {
+      background-color: darken($background, 10);
+   }
+
+   &.disabled {
+      background-color: lighten($dark, 50);
+      color: rgba($light, 0.8);
+      border-bottom: 2px solid darken(lighten($dark, 50), 20);
+   }
+
+   &.bordered {
+      background-color: rgba($background, 0.1);
+      border: 1px solid $background;
+      color: $background;
+      @include box-shadow(none);
+
       &:hover, &:focus {
-         background-color: darken($background, 10);
+         background-color: $background;
+         color: $text;
       }
 
-      &.bordered {
-         background-color: transparent;
-         border: 1px solid $background;
-         color: $background;
-         @include box-shadow(none);
-
-         &:hover, &:focus {
-            background-color: $background;
-            color: $text;
-         }
+      &.disabled {
+         background-color: rgba(lighten($dark, 50), 0.1);
+         border: 1px solid lighten($dark, 50);
+         color: rgba(lighten($dark, 50), 0.8);
       }
+   }
+
 }
 
 .btn {
