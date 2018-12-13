@@ -7,27 +7,93 @@
       @include box-shadow(0 0 4px 0 rgba($background-inverse, 0.75));
    }
 
+   &.with-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+      .card-content {
+         flex-grow: 1;
+         width: 100%;
+         padding: 16px;
+      }
+
+      .card-btn {
+         display: inline-block;
+         font-weight: 600;
+         height: 48px;
+         line-height: 48px;
+         text-align: center;
+         width: 100%;
+         color: $primary;
+         border-top: 1px solid rgba($background-inverse, 0.2);
+         &:hover {
+            cursor: pointer;
+            background-color: $primary;
+            color: $text-on-color;
+         }
+         &.secondary {
+            color: $secondary;
+            &:hover {
+               background-color: $secondary;
+               color: $text-on-color;
+            }
+         }
+         &.tertiary {
+            color: $tertiary;
+            &:hover {
+               background-color: $tertiary;
+               color: $text-on-color;
+            }
+         }
+      }
+   }
+
    &.primary {
       background-color: $primary;
       color: $text-on-color; 
-      * {
-        color: $text-on-color; 
+      *, &.with-btn .card-btn {
+         color: $text-on-color; 
+      }
+
+      &.with-btn .card-btn {
+         border-top: 1px solid rgba($text-on-color, 0.2);
+         &:hover {
+            background-color: $background;
+            color: $primary;
+         }
       }
    }
 
    &.secondary {
       background-color: $secondary;
       color: $text-on-color; 
-      * {
-        color: $text-on-color; 
+      *, &.with-btn .card-btn {
+         color: $text-on-color; 
+      }
+
+      &.with-btn .card-btn {
+         border-top: 1px solid rgba($text-on-color, 0.2);
+         &:hover {
+            background-color: $background;
+            color: $secondary;
+         }
       }
    }
 
    &.tertiary {
       background-color: $tertiary;
       color: $text-on-color; 
-      * {
+      *, &.with-btn .card-btn {
         color: $text-on-color; 
+      }
+      
+      &.with-btn .card-btn {
+         border-top: 1px solid rgba($text-on-color, 0.2);
+         &:hover {
+            background-color: $background;
+            color: $tertiary;
+         }
       }
    }
 }

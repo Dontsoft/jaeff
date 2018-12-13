@@ -36,13 +36,13 @@
 
 .btn {
    @include box-sizing(content-box);
-   @include box-shadow(0 0 2px 0 rgba(0, 0, 0, 0.14));
+   @include box-shadow(0 0 2px 0 rgba($background-inverse, 0.75));
    
    display: inline-block;
+   font-weight: 600;
    height: 48px;
-   min-width: 118px;
    padding: 0 16px;
-   margin: 0 16px;
+   margin: 8px 16px;
    line-height: 48px;
    text-align: center;
    border-radius: $default-border-radius;
@@ -51,7 +51,6 @@
    white-space: nowrap;
    &.slim {
       height: 36px;
-      min-width: 78px;
       line-height: 36px;
    }
 
