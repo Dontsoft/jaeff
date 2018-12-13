@@ -32,22 +32,22 @@
 
    &:checked + label::before {
       background-color: $primary;
-      @include svg-icon("add", $light);
+      @include svg-icon("add", $text-on-color);
    }
 
    &.checkmark:checked + label::before {
-      @include svg-icon("done", $light);
+      @include svg-icon("done", $text-on-color);
    }
 
    &:indeterminate + label::before {
       background-color: $primary;
-      @include svg-icon("remove", $light);
+      @include svg-icon("remove", $text-on-color);
    }
 
    &:disabled + label {
-      color: rgba($dark, 0.4);
+      color: rgba($text, 0.4);
    }
    &:disabled + label::before {
-      border: 1px solid rgba($dark, 0.4);
+      border: 1px solid rgba($text, 0.4);
    }
 }

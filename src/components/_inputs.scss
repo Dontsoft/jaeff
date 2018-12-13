@@ -20,7 +20,7 @@
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
       border: none;
-      border-bottom: 1px solid rgba($dark, 0.4);
+      border-bottom: 1px solid rgba($background-inverse, 0.4);
       &:hover, &:focus {
          border-bottom: 1px solid $primary;
       }
@@ -40,7 +40,7 @@
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
       border: none;
-      border-bottom: 1px solid rgba($dark, 0.4);
+      border-bottom: 1px solid rgba($background-inverse, 0.4);
       resize: vertical;
       &:hover, &:focus {
          border-bottom: 1px solid $primary;
@@ -75,7 +75,7 @@
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
       border: none;
-      border-bottom: 1px solid rgba($dark, 0.4);
+      border-bottom: 1px solid rgba($background-inverse, 0.4);
       &:hover, &:focus {
          border-bottom: 1px solid $primary;
       }

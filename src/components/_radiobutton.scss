@@ -36,9 +36,9 @@
    }
    
    &:disabled + label {
-      color: rgba($dark, 0.4);
+      color: rgba($text, 0.4);
    }
    &:disabled + label::before {
-      border: 1px solid rgba($dark, 0.4);
+      border: 1px solid rgba($text, 0.4);
    }
 }

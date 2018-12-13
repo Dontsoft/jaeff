@@ -2,8 +2,32 @@
    border-radius: $default-border-radius;
    margin: 16px;
    padding: 16px;
-   @include box-shadow(0 0 2px 0 rgba($dark, 0.75));
+   @include box-shadow(0 0 2px 0 rgba($background-inverse, 0.75));
    &.with-hover:hover, &.with-hover:focus {
-      @include box-shadow(0 0 4px 0 rgba($dark, 0.75));
+      @include box-shadow(0 0 4px 0 rgba($background-inverse, 0.75));
+   }
+
+   &.primary {
+      background-color: $primary;
+      color: $text-on-color; 
+      * {
+        color: $text-on-color; 
+      }
+   }
+
+   &.secondary {
+      background-color: $secondary;
+      color: $text-on-color; 
+      * {
+        color: $text-on-color; 
+      }
+   }
+
+   &.tertiary {
+      background-color: $tertiary;
+      color: $text-on-color; 
+      * {
+        color: $text-on-color; 
+      }
    }
 }
