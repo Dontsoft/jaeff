@@ -1,0 +1,16 @@
+language: node_js
+
+node_js:
+  - node
+  - 'lts/*'
+
+before_install:
+  - npm i -g npm@6.4.1
+cache: npm
+
+deploy:
+  provider: npm
+  email: "artem@dontsoft.com"
+  api_key: "bc589849-926b-498f-9cbb-9d06afe7da5d"
+  on:
+    branch: master
