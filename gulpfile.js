@@ -5,6 +5,7 @@ const del = require('del');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const log = require('gulplog');
+const bump = require('gulp-bump');
 
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
@@ -98,5 +99,29 @@ gulp.task('scripts', gulp.series('scripts:clean', () => {
    return compileJS('src/index.js', true, true);
 }));
 
-gulp.task('dev', gulp.parallel('styles:dev', 'scripts:dev'));
+gulp.task('v-patch', () => {
+   return gulp.src('./package*json')
+               .pipe(bump())
+               .pipe(gulp.dest('./'));
+});
+
+gulp.task('v-minor', () => {
+   return gulp.src('./package*json')
+               .pipe(bump({type: 'minor'}))
+               .pipe(gulp.dest('./'));
+});
+
+gulp.task('v-major', () => {
+   return gulp.src('./package*json')
+               .pipe(bump({type: 'major'}))
+               .pipe(gulp.dest('./'));
+});
+
+gulp.task('v-prerelease', () => {
+   return gulp.src('./package*json')
+               .pipe(bump({type: 'prerelease'}))
+               .pipe(gulp.dest('./'));
+});
+
+gulp.task('dev', gulp.parallel('v-prerelease', 'styles:dev', 'scripts:dev'));
 gulp.task('default', gulp.parallel('styles', 'scripts'));
