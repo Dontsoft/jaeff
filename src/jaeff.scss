@@ -349,10 +349,16 @@
  }
 
 //! End normalize.css
+$background: #FAFFFD !default;
+$background-inverse: #313638 !default;
+$text: #313628 !default;
+$text-inverse: #FAFFFD !default;
+$text-on-color: #FAFFFD !default;
 
-$light: #FFFFFF !default;
-$dark: #262626 !default;
 $primary: #4392F1 !default;
+$secondary: #624CAB !default;
+$tertiary: #5bc0eb !default;
+
 $error: #DC493A !default;
 $data-viz-1: #63A37F !default;
 $data-viz-2: #713E5A !default;
@@ -360,7 +366,14 @@ $data-viz-3: #EAC435 !default;
 $data-viz-4: #FF6B35 !default;
 $data-viz-5: #150578 !default;
 $data-viz-6: #CFDEE7 !default;
+
 $default-border-radius: 2px !default;
+
+$height-s: 18px !default;
+$height-m: 24px !default;
+$height-l: 36px !default;
+$height-xl: 40px !default;
+$height-2xl: 48px !default;
 
 @mixin box-sizing($sizing) {
    -webkit-box-sizing: $sizing;
@@ -397,6 +410,18 @@ $default-border-radius: 2px !default;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+input, button, select, textarea {
+  outline: none;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+option:not(:checked) {
+color: black; /* prevent <option>s from becoming transparent as well */
+}
+
 @for $i from 1 through 6 {
    h#{$i} {
       font-family: 'Lato', sans-serif;
@@ -410,21 +435,34 @@ body {
 
 ::selection {
    background: $primary;
-   color: $light;
+   color: $text-on-color;
 }
 
-@import "./layouts/flex.scss";
-@import "./layouts/grid.scss";
+@import "./layouts/flex";
+@import "./layouts/grid";
 
-@import "./components/buttons.scss";
-@import "./components/cards.scss";
+@import "./components/buttons";
+@import "./components/cards";
 
 .form-item {
-   margin: 6px 0;
-   position: relative;
-   @import "./components/checkbox.scss";
-   @import "./components/radiobutton.scss";
-   @import "./components/inputs.scss";
+  margin: 6px 0;
+  position: relative;
+  width: 100%;
+
+  & > label {
+    display: inline-block;
+    height: $height-s;
+    width: 100%;
+    line-height: $height-s;
+    margin-bottom: 6px;
+    font-weight: 600;
+ }
+
+  @import "./components/checkbox";
+  @import "./components/dropdown";
+  @import "./components/inputs";
+  @import "./components/radiobutton";
+  @import "./components/select";
 }
 
-@import "./components/tag.scss";
+@import "./components/tag";

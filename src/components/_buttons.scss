@@ -1,46 +1,72 @@
-@mixin btn-color($classname, $background, $text) {
-   &.#{$classname} {
-      background-color: $background;
-      color: $text;
+@mixin btn-color($background, $text) {
+   background-color: $background;
+   color: $text;
+   border-bottom: 2px solid darken($background, 20);
+   &:hover, &:focus {
+      background-color: darken($background, 10);
+   }
+
+   &.disabled {
+      background-color: lighten($background-inverse, 50);
+      color: rgba($text-inverse, 0.8);
+      border-bottom: 2px solid darken(lighten($background-inverse, 50), 20);
+      cursor: not-allowed;
+   }
+
+   &.bordered {
+      background-color: rgba($background, 0.1);
+      border: 1px solid $background;
+      color: $background;
+      @include box-shadow(none);
+
       &:hover, &:focus {
-         background-color: darken($background, 10);
+         background-color: $background;
+         color: $text;
       }
 
-      &.bordered {
-         background-color: transparent;
-         border: 1px solid $background;
-         color: $background;
-         @include box-shadow(none);
-
-         &:hover, &:focus {
-            background-color: $background;
-            color: $text;
-         }
+      &.disabled {
+         background-color: rgba(lighten($background-inverse, 50), 0.1);
+         border: 1px solid lighten($background-inverse, 50);
+         color: rgba(lighten($background-inverse, 50), 0.8);
+         cursor: not-allowed;
       }
    }
+
 }
 
 .btn {
    @include box-sizing(content-box);
-   @include box-shadow(0 0 2px 0 rgba(0, 0, 0, 0.14));
+   @include box-shadow(0 0 2px 0 rgba($background-inverse, 0.75));
    
    display: inline-block;
-   height: 48px;
-   min-width: 118px;
+   font-weight: 600;
+   height: $height-2xl;
    padding: 0 16px;
-   margin: 0 16px;
-   line-height: 48px;
+   margin: 8px 16px;
+   line-height: $height-2xl;
    text-align: center;
    border-radius: $default-border-radius;
    border: 1px solid transparent;
    cursor: pointer;
    white-space: nowrap;
    &.slim {
-      height: 36px;
-      min-width: 78px;
-      line-height: 36px;
+      height: $height-l;
+      line-height: $height-l;
    }
 
-   @include btn-color(primary, $primary, $light);
-   @include btn-color(error, $error, $light);
+   &.primary {
+      @include btn-color($primary, $text-on-color);
+   }
+
+   &.secondary {
+      @include btn-color($secondary, $text-on-color);
+   }
+
+   &.tertiary {
+      @include btn-color($tertiary, $text-on-color);
+   }
+
+   &.error {
+      @include btn-color($error, $text-on-color);
+   }
 }

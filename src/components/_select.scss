@@ -1,0 +1,49 @@
+&.select-input-wrapper {
+   display: -webkit-flex;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   position: relative;
+
+   & > select {
+      appearance: none;
+      border: none;
+      &::-ms-expand {
+         display: none;
+      }
+      width: 100%;
+      height: $height-l;
+      line-height: $height-l;
+      padding: 0 12px;
+      padding-right: 48px;
+      background-color: rgba(darken($primary, 5), 0.05);
+      border-top-left-radius: $default-border-radius;
+      border-top-right-radius: $default-border-radius;
+      border: none;
+      border-bottom: 1px solid rgba($background-inverse, 0.4);
+      &:hover, &:focus {
+         border-bottom: 1px solid $primary;
+      }
+   
+      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
+         box-shadow: none;
+         border-bottom: 1px solid $error;
+      }
+   }
+
+   &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      height: 24px;
+      width: 24px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      @include svg-icon("down", $text);
+      right: 12px;
+      bottom: 8px;
+      z-index: 1;
+      pointer-events: none;
+   }
+}
