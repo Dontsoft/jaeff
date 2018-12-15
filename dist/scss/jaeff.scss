@@ -880,12 +880,15 @@ body {
       }
    }
 }
-  &.jf--text-input-wrapper {
+  @mixin input-wrapper {
    display: -webkit-flex;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
+}
 
+&.jf--text-input-wrapper {
+   @include input-wrapper();
    & > label {
       height: 18px;
       line-height: $height-s;
@@ -936,10 +939,7 @@ body {
 }
 
 &.jf--email-input-wrapper {
-   display: -webkit-flex;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
+   @include input-wrapper();
 
    & > input[type="email"] {
       width: 100%;
@@ -962,13 +962,27 @@ body {
    }
 }
 
-&.jf--number-input-wrapper {
-   display: -webkit-flex;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-
-
+&.jf--password-input-wrapper {
+   @include input-wrapper();
+   & > input[type="password"] {
+      width: 100%;
+      height: $height-xl;
+      line-height: $height-xl;
+      padding: 0 12px;
+      background-color: rgba(darken($primary, 5), 0.05);
+      border-top-left-radius: $default-border-radius;
+      border-top-right-radius: $default-border-radius;
+      border: none;
+      border-bottom: 1px solid rgba($background-inverse, 0.4);
+      &:hover, &:focus {
+         border-bottom: 1px solid $primary;
+      }
+   
+      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
+         box-shadow: none;
+         border-bottom: 1px solid $error;
+      }
+   }
 }
   @mixin radio-size {
    width: 100%;
