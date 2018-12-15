@@ -1,8 +1,8 @@
 @mixin checkbox-size {
    width: 100%;
-   height: 30px;
-   line-height: 30px;
-   padding-left: 30px;
+   height: $height-l;
+   line-height: $height-l;
+   padding-left: $height-l;
 }
 
 &.checkbox-input-wrapper > input[type="checkbox"] {
@@ -19,10 +19,10 @@
       display: inline-block;
       content: '';
       text-align: center;
-      height: 18px;
-      width: 18px;
+      height: $height-s;
+      width: $height-s;
       left: 0;
-      top: 6px;
+      top: (($height-l - $height-s) / 2);
       border-radius: $default-border-radius;
       border: 1px solid $primary;
       background-color: transparent;
@@ -32,22 +32,22 @@
 
    &:checked + label::before {
       background-color: $primary;
-      @include svg-icon("add", $light);
+      @include svg-icon("add", $text-on-color);
    }
 
    &.checkmark:checked + label::before {
-      @include svg-icon("done", $light);
+      @include svg-icon("done", $text-on-color);
    }
 
    &:indeterminate + label::before {
       background-color: $primary;
-      @include svg-icon("remove", $light);
+      @include svg-icon("remove", $text-on-color);
    }
 
    &:disabled + label {
-      color: rgba($dark, 0.4);
+      color: rgba($text, 0.4);
    }
    &:disabled + label::before {
-      border: 1px solid rgba($dark, 0.4);
+      border: 1px solid rgba($text, 0.4);
    }
 }

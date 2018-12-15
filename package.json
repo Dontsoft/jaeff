@@ -2,14 +2,14 @@
   "name": "jaeff",
   "version": "1.0.0",
   "description": "Just Another Easy Frontend Framework",
-  "main": "src/jaeff.js",
+  "main": "dist/jaeff.js",
   "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/Dontsoft/jaeff.git"
   },
   "author": "Artem Dontsov",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Dontsoft/jaeff/issues"
   },

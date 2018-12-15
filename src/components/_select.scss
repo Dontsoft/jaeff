@@ -5,15 +5,6 @@
    align-items: flex-start;
    position: relative;
 
-   & > label {
-      display: inline-block;
-      height: 18px;
-      width: 100%;
-      line-height: 18px;
-      margin-bottom: 6px;
-      font-weight: 600;
-   }
-
    & > select {
       appearance: none;
       border: none;
@@ -21,15 +12,15 @@
          display: none;
       }
       width: 100%;
-      height: 40px;
-      line-height: 40px;
+      height: $height-l;
+      line-height: $height-l;
       padding: 0 12px;
       padding-right: 48px;
       background-color: rgba(darken($primary, 5), 0.05);
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
       border: none;
-      border-bottom: 1px solid rgba($dark, 0.4);
+      border-bottom: 1px solid rgba($background-inverse, 0.4);
       &:hover, &:focus {
          border-bottom: 1px solid $primary;
       }
@@ -49,7 +40,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      @include svg-icon("down", $dark);
+      @include svg-icon("down", $text);
       right: 12px;
       bottom: 8px;
       z-index: 1;
