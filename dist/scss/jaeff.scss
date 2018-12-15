@@ -481,6 +481,42 @@ body {
    color: $text-on-color;
 }
 
+.bg {
+  background-color: $background;
+}
+
+.jf--bg-inverse {
+  background-color: $background-inverse;
+}
+
+.jf--bg-primary {
+  background-color: $primary;
+}
+
+.jf--bg-secondary {
+  background-color: $secondary;
+}
+
+.jf--bg-tertiary {
+  background-color: $tertiary;
+}
+
+.jf--bg-error {
+  background-color: $error;
+}
+
+.jf--text {
+  color: $text;
+}
+
+.jf--text-inverse {
+  color: $text-inverse;
+}
+
+.jf--text-on-color {
+  color: $text-on-color;
+}
+
 @mixin flex-base {
    display: -webkit-flex;
    display: flex;
@@ -640,6 +676,7 @@ body {
    }
 }
 .jf--card {
+   background-color: $background;
    border-radius: $default-border-radius;
    margin: 16px;
    padding: 16px;

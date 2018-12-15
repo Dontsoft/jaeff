@@ -438,6 +438,42 @@ body {
    color: $text-on-color;
 }
 
+.bg {
+  background-color: $background;
+}
+
+.bg-inverse {
+  background-color: $background-inverse;
+}
+
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-secondary {
+  background-color: $secondary;
+}
+
+.bg-tertiary {
+  background-color: $tertiary;
+}
+
+.bg-error {
+  background-color: $error;
+}
+
+.text {
+  color: $text;
+}
+
+.text-inverse {
+  color: $text-inverse;
+}
+
+.text-on-color {
+  color: $text-on-color;
+}
+
 @import "./layouts/flex";
 @import "./layouts/grid";
 
