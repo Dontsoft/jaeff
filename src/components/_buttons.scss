@@ -40,18 +40,18 @@
    
    display: inline-block;
    font-weight: 600;
-   height: 48px;
+   height: $height-2xl;
    padding: 0 16px;
    margin: 8px 16px;
-   line-height: 48px;
+   line-height: $height-2xl;
    text-align: center;
    border-radius: $default-border-radius;
    border: 1px solid transparent;
    cursor: pointer;
    white-space: nowrap;
    &.slim {
-      height: 36px;
-      line-height: 36px;
+      height: $height-l;
+      line-height: $height-l;
    }
 
    &.primary {

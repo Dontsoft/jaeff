@@ -367,8 +367,13 @@ $data-viz-4: #FF6B35 !default;
 $data-viz-5: #150578 !default;
 $data-viz-6: #CFDEE7 !default;
 
-
 $default-border-radius: 2px !default;
+
+$height-s: 18px !default;
+$height-m: 24px !default;
+$height-l: 36px !default;
+$height-xl: 40px !default;
+$height-2xl: 48px !default;
 
 @mixin box-sizing($sizing) {
    -webkit-box-sizing: $sizing;
@@ -443,6 +448,15 @@ body {
   margin: 6px 0;
   position: relative;
   width: 100%;
+
+  & > label {
+    display: inline-block;
+    height: $height-s;
+    width: 100%;
+    line-height: $height-s;
+    margin-bottom: 6px;
+    font-weight: 600;
+ }
 
   @import "./components/checkbox";
   @import "./components/dropdown";
