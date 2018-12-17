@@ -349,10 +349,16 @@
  }
 
 //! End normalize.jf--css
+$background: #FAFFFD !default;
+$background-inverse: #313638 !default;
+$text: #313628 !default;
+$text-inverse: #FAFFFD !default;
+$text-on-color: #FAFFFD !default;
 
-$light: #FFFFFF !default;
-$dark: #262626 !default;
 $primary: #4392F1 !default;
+$secondary: #624CAB !default;
+$tertiary: #5bc0eb !default;
+
 $error: #DC493A !default;
 $data-viz-1: #63A37F !default;
 $data-viz-2: #713E5A !default;
@@ -360,7 +366,14 @@ $data-viz-3: #EAC435 !default;
 $data-viz-4: #FF6B35 !default;
 $data-viz-5: #150578 !default;
 $data-viz-6: #CFDEE7 !default;
+
 $default-border-radius: 2px !default;
+
+$height-s: 18px !default;
+$height-m: 24px !default;
+$height-l: 36px !default;
+$height-xl: 40px !default;
+$height-2xl: 48px !default;
 
 @mixin box-sizing($sizing) {
    -webkit-box-sizing: $sizing;
@@ -468,6 +481,42 @@ body {
    color: $text-on-color;
 }
 
+.bg {
+  background-color: $background;
+}
+
+.jf--bg-inverse {
+  background-color: $background-inverse;
+}
+
+.jf--bg-primary {
+  background-color: $primary;
+}
+
+.jf--bg-secondary {
+  background-color: $secondary;
+}
+
+.jf--bg-tertiary {
+  background-color: $tertiary;
+}
+
+.jf--bg-error {
+  background-color: $error;
+}
+
+.jf--text {
+  color: $text;
+}
+
+.jf--text-inverse {
+  color: $text-inverse;
+}
+
+.jf--text-on-color {
+  color: $text-on-color;
+}
+
 @mixin flex-base {
    display: -webkit-flex;
    display: flex;
@@ -479,6 +528,7 @@ body {
    flex-direction: row;
    align-items: center;
    justify-content: center;
+   flex-wrap: wrap;
    &.jf--no-v-center {
       align-items: stretch;
    }
@@ -498,6 +548,9 @@ body {
    &.jf--end {
       justify-content: flex-end;
       justify-content: end;
+   }
+   &.jf--no-wrap {
+      flex-wrap: nowrap;
    }
 }
 
@@ -552,60 +605,174 @@ body {
 
 @mixin btn-color($background, $text) {
    background-color: $background;
-      color: $text;
+   color: $text;
+   border-bottom: 2px solid darken($background, 20);
+   &:hover, &:focus {
+      background-color: darken($background, 10);
+   }
+
+   &.jf--disabled {
+      background-color: lighten($background-inverse, 50);
+      color: rgba($text-inverse, 0.8);
+      border-bottom: 2px solid darken(lighten($background-inverse, 50), 20);
+      cursor: not-allowed;
+   }
+
+   &.jf--bordered {
+      background-color: rgba($background, 0.1);
+      border: 1px solid $background;
+      color: $background;
+      @include box-shadow(none);
+
       &:hover, &:focus {
-         background-color: darken($background, 10);
+         background-color: $background;
+         color: $text;
       }
 
-      &.jf--bordered {
-         background-color: transparent;
-         border: 1px solid $background;
-         color: $background;
-         @include box-shadow(none);
-
-         &:hover, &:focus {
-            background-color: $background;
-            color: $text;
-         }
+      &.jf--disabled {
+         background-color: rgba(lighten($background-inverse, 50), 0.1);
+         border: 1px solid lighten($background-inverse, 50);
+         color: rgba(lighten($background-inverse, 50), 0.8);
+         cursor: not-allowed;
       }
+   }
+
 }
 
 .jf--btn {
    @include box-sizing(content-box);
-   @include box-shadow(0 0 2px 0 rgba(0, 0, 0, 0.14));
+   @include box-shadow(0 0 2px 0 rgba($background-inverse, 0.75));
    
    display: inline-block;
-   height: 48px;
-   min-width: 118px;
+   font-weight: 600;
+   height: $height-2xl;
    padding: 0 16px;
-   margin: 0 16px;
-   line-height: 48px;
+   margin: 8px 16px;
+   line-height: $height-2xl;
    text-align: center;
    border-radius: $default-border-radius;
    border: 1px solid transparent;
    cursor: pointer;
    white-space: nowrap;
    &.jf--slim {
-      height: 36px;
-      min-width: 78px;
-      line-height: 36px;
+      height: $height-l;
+      line-height: $height-l;
    }
 
    &.jf--primary {
-      @include btn-color($primary, $light);
+      @include btn-color($primary, $text-on-color);
+   }
+
+   &.jf--secondary {
+      @include btn-color($secondary, $text-on-color);
+   }
+
+   &.jf--tertiary {
+      @include btn-color($tertiary, $text-on-color);
    }
 
    &.jf--error {
-      @include btn-color($error, $light);
+      @include btn-color($error, $text-on-color);
    }
 }
 .jf--card {
+   background-color: $background;
    border-radius: $default-border-radius;
    margin: 16px;
    padding: 16px;
-   @include box-shadow2(0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24));
+   @include box-shadow(0 0 2px 0 rgba($background-inverse, 0.75));
    &.jf--with-hover:hover, &.jf--with-hover:focus {
-      @include box-shadow2(0 4px 6px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.22));
+      @include box-shadow(0 0 4px 0 rgba($background-inverse, 0.75));
+   }
+
+   &.jf--with-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+      .jf--card-content {
+         flex-grow: 1;
+         width: 100%;
+         padding: 16px;
+      }
+
+      .jf--card-btn {
+         display: inline-block;
+         font-weight: 600;
+         height: $height-2xl;
+         line-height: $height-2xl;
+         text-align: center;
+         width: 100%;
+         color: $primary;
+         border-top: 1px solid rgba($background-inverse, 0.2);
+         &:hover {
+            cursor: pointer;
+            background-color: $primary;
+            color: $text-on-color;
+         }
+         &.jf--secondary {
+            color: $secondary;
+            &:hover {
+               background-color: $secondary;
+               color: $text-on-color;
+            }
+         }
+         &.jf--tertiary {
+            color: $tertiary;
+            &:hover {
+               background-color: $tertiary;
+               color: $text-on-color;
+            }
+         }
+      }
+   }
+
+   &.jf--primary {
+      background-color: $primary;
+      color: $text-on-color; 
+      *, &.jf--with-btn .jf--card-btn {
+         color: $text-on-color; 
+      }
+
+      &.jf--with-btn .jf--card-btn {
+         border-top: 1px solid rgba($text-on-color, 0.2);
+         &:hover {
+            background-color: $background;
+            color: $primary;
+         }
+      }
+   }
+
+   &.jf--secondary {
+      background-color: $secondary;
+      color: $text-on-color; 
+      *, &.jf--with-btn .jf--card-btn {
+         color: $text-on-color; 
+      }
+
+      &.jf--with-btn .jf--card-btn {
+         border-top: 1px solid rgba($text-on-color, 0.2);
+         &:hover {
+            background-color: $background;
+            color: $secondary;
+         }
+      }
+   }
+
+   &.jf--tertiary {
+      background-color: $tertiary;
+      color: $text-on-color; 
+      *, &.jf--with-btn .jf--card-btn {
+        color: $text-on-color; 
+      }
+      
+      &.jf--with-btn .jf--card-btn {
+         border-top: 1px solid rgba($text-on-color, 0.2);
+         &:hover {
+            background-color: $background;
+            color: $tertiary;
+         }
+      }
    }
 }
 
@@ -614,11 +781,20 @@ body {
   position: relative;
   width: 100%;
 
+  & > label {
+    display: inline-block;
+    height: $height-s;
+    width: 100%;
+    line-height: $height-s;
+    margin-bottom: 6px;
+    font-weight: 600;
+ }
+
   @mixin checkbox-size {
    width: 100%;
-   height: 30px;
-   line-height: 30px;
-   padding-left: 30px;
+   height: $height-l;
+   line-height: $height-l;
+   padding-left: $height-l;
 }
 
 &.jf--checkbox-input-wrapper > input[type="checkbox"] {
@@ -635,10 +811,10 @@ body {
       display: inline-block;
       content: '';
       text-align: center;
-      height: 18px;
-      width: 18px;
+      height: $height-s;
+      width: $height-s;
       left: 0;
-      top: 6px;
+      top: (($height-l - $height-s) / 2);
       border-radius: $default-border-radius;
       border: 1px solid $primary;
       background-color: transparent;
@@ -648,23 +824,23 @@ body {
 
    &:checked + label::before {
       background-color: $primary;
-      @include svg-icon("add", $light);
+      @include svg-icon("add", $text-on-color);
    }
 
    &.jf--checkmark:checked + label::before {
-      @include svg-icon("done", $light);
+      @include svg-icon("done", $text-on-color);
    }
 
    &:indeterminate + label::before {
       background-color: $primary;
-      @include svg-icon("remove", $light);
+      @include svg-icon("remove", $text-on-color);
    }
 
    &:disabled + label {
-      color: rgba($dark, 0.4);
+      color: rgba($text, 0.4);
    }
    &:disabled + label::before {
-      border: 1px solid rgba($dark, 0.4);
+      border: 1px solid rgba($text, 0.4);
    }
 }
 
@@ -673,27 +849,18 @@ body {
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   
-   & > label {
-      display: inline-block;
-      height: 18px;
-      width: 100%;
-      line-height: 18px;
-      margin-bottom: 6px;
-      font-weight: 600;
-   }
 
    & > .jf--dropdown {
       width: 100%;
-      height: 40px;
-      line-height: 40px;
+      height: $height-xl;
+      line-height: $height-xl;
       padding: 0 12px;
       padding-right: 48px;
       background-color: rgba(darken($primary, 5), 0.05);
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
       border: none;
-      border-bottom: 1px solid rgba($dark, 0.4);
+      border-bottom: 1px solid rgba($background-inverse, 0.4);
       &:hover, &:focus {
          border-bottom: 1px solid $primary;
       }
@@ -713,7 +880,7 @@ body {
          background-size: contain;
          background-position: center;
          background-repeat: no-repeat;
-         @include svg-icon("down", $dark);
+         @include svg-icon("down", $text);
          right: 12px;
          bottom: 8px;
          z-index: 1;
@@ -723,36 +890,45 @@ body {
       & > .jf--dropdown-item-wrapper {
          display: none;
          @include box-shadow2(0 4px 6px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.22));
-         &.jf--visible {
-            display: -webkit-flex;
-            display: flex;
-         }
          flex-direction: column;
          align-items: flex-start;
          position: absolute;
          top: 40px;
          left: 0;
+         width: 100%;
          min-height: 40px;
          max-height: 200px;
          z-index: 100;
+         background-color: $background;
          & > .jf--dropdown-item {
             width: 100%;
-            height: 40px;
-            line-height: 40px;
+            height: $height-l;
+            line-height: $height-l;
             padding: 0 12px 0 48px;
+            &:hover {
+               background-color: rgba($primary, 0.2);
+               cursor: pointer;
+            }
          }
+      }
+      &.jf--visible > .jf--dropdown-item-wrapper {
+         display: -webkit-flex;
+         display: flex;
       }
    }
 }
-  &.jf--text-input-wrapper {
+  @mixin input-wrapper {
    display: -webkit-flex;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
+}
 
+&.jf--text-input-wrapper {
+   @include input-wrapper();
    & > label {
       height: 18px;
-      line-height: 18px;
+      line-height: $height-s;
       margin-bottom: 6px;
       font-weight: 600;
    }
@@ -760,13 +936,13 @@ body {
    & > input[type="text"] {
       width: 100%;
       height: 40px;
-      line-height: 40px;
+      line-height: $height-l;
       padding: 0 12px;
       background-color: rgba(darken($primary, 5), 0.05);
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
       border: none;
-      border-bottom: 1px solid rgba($dark, 0.4);
+      border-bottom: 1px solid rgba($background-inverse, 0.4);
       &:hover, &:focus {
          border-bottom: 1px solid $primary;
       }
@@ -779,14 +955,14 @@ body {
 
    & > textarea {
       width: 100%;
-      min-height: 40px;
-      line-height: 40px;
+      min-height: $height-l;
+      line-height: $height-l;
       padding: 0 12px;
       background-color: rgba(darken($primary, 5), 0.05);
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
       border: none;
-      border-bottom: 1px solid rgba($dark, 0.4);
+      border-bottom: 1px solid rgba($background-inverse, 0.4);
       resize: vertical;
       &:hover, &:focus {
          border-bottom: 1px solid $primary;
@@ -800,28 +976,41 @@ body {
 }
 
 &.jf--email-input-wrapper {
-   display: -webkit-flex;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-
-   & > label {
-      height: 18px;
-      line-height: 18px;
-      margin-bottom: 6px;
-      font-weight: 600;
-   }
+   @include input-wrapper();
 
    & > input[type="email"] {
       width: 100%;
-      height: 40px;
-      line-height: 40px;
+      height: $height-xl;
+      line-height: $height-xl;
       padding: 0 12px;
       background-color: rgba(darken($primary, 5), 0.05);
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
       border: none;
-      border-bottom: 1px solid rgba($dark, 0.4);
+      border-bottom: 1px solid rgba($background-inverse, 0.4);
+      &:hover, &:focus {
+         border-bottom: 1px solid $primary;
+      }
+   
+      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
+         box-shadow: none;
+         border-bottom: 1px solid $error;
+      }
+   }
+}
+
+&.jf--password-input-wrapper {
+   @include input-wrapper();
+   & > input[type="password"] {
+      width: 100%;
+      height: $height-xl;
+      line-height: $height-xl;
+      padding: 0 12px;
+      background-color: rgba(darken($primary, 5), 0.05);
+      border-top-left-radius: $default-border-radius;
+      border-top-right-radius: $default-border-radius;
+      border: none;
+      border-bottom: 1px solid rgba($background-inverse, 0.4);
       &:hover, &:focus {
          border-bottom: 1px solid $primary;
       }
@@ -834,9 +1023,9 @@ body {
 }
   @mixin radio-size {
    width: 100%;
-   height: 30px;
-   line-height: 30px;
-   padding-left: 30px;
+   height: $height-l;
+   line-height: $height-l;
+   padding-left: $height-l;
 }
 
 &.jf--radio-input-wrapper > input[type="radio"].jf--radio {
@@ -854,11 +1043,11 @@ body {
       display: inline-block;
       content: '';
       text-align: center;
-      height: 18px;
-      width: 18px;
+      height: $height-s;
+      width: $height-s;
       left: 0;
-      top: 6px;
-      border-radius: 9px;
+      top: (($height-l - $height-s) / 2);
+      border-radius: ($height-s / 2);
       border: 1px solid $primary;
       background-color: transparent;
       background-position: center;
@@ -870,10 +1059,10 @@ body {
    }
    
    &:disabled + label {
-      color: rgba($dark, 0.4);
+      color: rgba($text, 0.4);
    }
    &:disabled + label::before {
-      border: 1px solid rgba($dark, 0.4);
+      border: 1px solid rgba($text, 0.4);
    }
 }
   &.jf--select-input-wrapper {
@@ -883,15 +1072,6 @@ body {
    align-items: flex-start;
    position: relative;
 
-   & > label {
-      display: inline-block;
-      height: 18px;
-      width: 100%;
-      line-height: 18px;
-      margin-bottom: 6px;
-      font-weight: 600;
-   }
-
    & > select {
       appearance: none;
       border: none;
@@ -899,15 +1079,15 @@ body {
          display: none;
       }
       width: 100%;
-      height: 40px;
-      line-height: 40px;
+      height: $height-l;
+      line-height: $height-l;
       padding: 0 12px;
       padding-right: 48px;
       background-color: rgba(darken($primary, 5), 0.05);
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
       border: none;
-      border-bottom: 1px solid rgba($dark, 0.4);
+      border-bottom: 1px solid rgba($background-inverse, 0.4);
       &:hover, &:focus {
          border-bottom: 1px solid $primary;
       }
@@ -927,7 +1107,7 @@ body {
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      @include svg-icon("down", $dark);
+      @include svg-icon("down", $text);
       right: 12px;
       bottom: 8px;
       z-index: 1;
@@ -945,8 +1125,8 @@ body {
 
 .jf--tag {
    display: inline-block;
-   height: 18px;
-   line-height: 18px;
+   height: $height-s;
+   line-height: $height-s;
    padding: 0 6px;
    margin: 0 6px;
    font-size: 11px;
