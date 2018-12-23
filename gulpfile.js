@@ -123,5 +123,5 @@ gulp.task('v-prerelease', () => {
                .pipe(gulp.dest('./'));
 });
 
-gulp.task('dev', gulp.parallel('v-prerelease', 'styles:dev', 'scripts:dev'));
+gulp.task('dev', gulp.parallel('styles:dev', 'scripts:dev'));
 gulp.task('default', gulp.parallel('styles', 'scripts'));

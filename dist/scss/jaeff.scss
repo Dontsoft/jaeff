@@ -349,11 +349,11 @@
  }
 
 //! End normalize.jf--css
-$background: #FAFFFD !default;
+$background: #FFFFFF !default;
 $background-inverse: #313638 !default;
 $text: #313628 !default;
-$text-inverse: #FAFFFD !default;
-$text-on-color: #FAFFFD !default;
+$text-inverse: #FFFFFF !default;
+$text-on-color: #FFFFFF !default;
 
 $primary: #4392F1 !default;
 $secondary: #624CAB !default;
@@ -602,179 +602,6 @@ body {
    @include grid-base;
 }
 
-
-@mixin btn-color($background, $text) {
-   background-color: $background;
-   color: $text;
-   border-bottom: 2px solid darken($background, 20);
-   &:hover, &:focus {
-      background-color: darken($background, 10);
-   }
-
-   &.jf--disabled {
-      background-color: lighten($background-inverse, 50);
-      color: rgba($text-inverse, 0.8);
-      border-bottom: 2px solid darken(lighten($background-inverse, 50), 20);
-      cursor: not-allowed;
-   }
-
-   &.jf--bordered {
-      background-color: rgba($background, 0.1);
-      border: 1px solid $background;
-      color: $background;
-      @include box-shadow(none);
-
-      &:hover, &:focus {
-         background-color: $background;
-         color: $text;
-      }
-
-      &.jf--disabled {
-         background-color: rgba(lighten($background-inverse, 50), 0.1);
-         border: 1px solid lighten($background-inverse, 50);
-         color: rgba(lighten($background-inverse, 50), 0.8);
-         cursor: not-allowed;
-      }
-   }
-
-}
-
-.jf--btn {
-   @include box-sizing(content-box);
-   @include box-shadow(0 0 2px 0 rgba($background-inverse, 0.75));
-   
-   display: inline-block;
-   font-weight: 600;
-   height: $height-2xl;
-   padding: 0 16px;
-   margin: 8px 16px;
-   line-height: $height-2xl;
-   text-align: center;
-   border-radius: $default-border-radius;
-   border: 1px solid transparent;
-   cursor: pointer;
-   white-space: nowrap;
-   &.jf--slim {
-      height: $height-l;
-      line-height: $height-l;
-   }
-
-   &.jf--primary {
-      @include btn-color($primary, $text-on-color);
-   }
-
-   &.jf--secondary {
-      @include btn-color($secondary, $text-on-color);
-   }
-
-   &.jf--tertiary {
-      @include btn-color($tertiary, $text-on-color);
-   }
-
-   &.jf--error {
-      @include btn-color($error, $text-on-color);
-   }
-}
-.jf--card {
-   background-color: $background;
-   border-radius: $default-border-radius;
-   margin: 16px;
-   padding: 16px;
-   @include box-shadow(0 0 2px 0 rgba($background-inverse, 0.75));
-   &.jf--with-hover:hover, &.jf--with-hover:focus {
-      @include box-shadow(0 0 4px 0 rgba($background-inverse, 0.75));
-   }
-
-   &.jf--with-btn {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0;
-      .jf--card-content {
-         flex-grow: 1;
-         width: 100%;
-         padding: 16px;
-      }
-
-      .jf--card-btn {
-         display: inline-block;
-         font-weight: 600;
-         height: $height-2xl;
-         line-height: $height-2xl;
-         text-align: center;
-         width: 100%;
-         color: $primary;
-         border-top: 1px solid rgba($background-inverse, 0.2);
-         &:hover {
-            cursor: pointer;
-            background-color: $primary;
-            color: $text-on-color;
-         }
-         &.jf--secondary {
-            color: $secondary;
-            &:hover {
-               background-color: $secondary;
-               color: $text-on-color;
-            }
-         }
-         &.jf--tertiary {
-            color: $tertiary;
-            &:hover {
-               background-color: $tertiary;
-               color: $text-on-color;
-            }
-         }
-      }
-   }
-
-   &.jf--primary {
-      background-color: $primary;
-      color: $text-on-color; 
-      *, &.jf--with-btn .jf--card-btn {
-         color: $text-on-color; 
-      }
-
-      &.jf--with-btn .jf--card-btn {
-         border-top: 1px solid rgba($text-on-color, 0.2);
-         &:hover {
-            background-color: $background;
-            color: $primary;
-         }
-      }
-   }
-
-   &.jf--secondary {
-      background-color: $secondary;
-      color: $text-on-color; 
-      *, &.jf--with-btn .jf--card-btn {
-         color: $text-on-color; 
-      }
-
-      &.jf--with-btn .jf--card-btn {
-         border-top: 1px solid rgba($text-on-color, 0.2);
-         &:hover {
-            background-color: $background;
-            color: $secondary;
-         }
-      }
-   }
-
-   &.jf--tertiary {
-      background-color: $tertiary;
-      color: $text-on-color; 
-      *, &.jf--with-btn .jf--card-btn {
-        color: $text-on-color; 
-      }
-      
-      &.jf--with-btn .jf--card-btn {
-         border-top: 1px solid rgba($text-on-color, 0.2);
-         &:hover {
-            background-color: $background;
-            color: $tertiary;
-         }
-      }
-   }
-}
 
 .jf--form-item {
   margin: 6px 0;
@@ -1116,6 +943,212 @@ body {
 }
 }
 
+@mixin btn-color($background, $text) {
+   background-color: $background;
+   color: $text;
+   border-bottom: 2px solid darken($background, 20);
+   &:hover, &:focus {
+      background-color: darken($background, 10);
+   }
+
+   &.jf--disabled {
+      background-color: lighten($background-inverse, 50);
+      color: rgba($text-inverse, 0.8);
+      border-bottom: 2px solid darken(lighten($background-inverse, 50), 20);
+      cursor: not-allowed;
+   }
+
+   &.jf--bordered {
+      background-color: rgba($background, 0.1);
+      border: 1px solid $background;
+      color: $background;
+      @include box-shadow(none);
+
+      &:hover, &:focus {
+         background-color: $background;
+         color: $text;
+      }
+
+      &.jf--disabled {
+         background-color: rgba(lighten($background-inverse, 50), 0.1);
+         border: 1px solid lighten($background-inverse, 50);
+         color: rgba(lighten($background-inverse, 50), 0.8);
+         cursor: not-allowed;
+      }
+   }
+
+}
+
+.jf--btn {
+   @include box-sizing(content-box);
+   @include box-shadow(0 0 2px 0 rgba($background-inverse, 0.75));
+   
+   display: inline-block;
+   font-weight: 600;
+   height: $height-2xl;
+   padding: 0 16px;
+   margin: 8px 16px;
+   line-height: $height-2xl;
+   text-align: center;
+   border-radius: $default-border-radius;
+   border: 1px solid transparent;
+   cursor: pointer;
+   white-space: nowrap;
+   &.jf--slim {
+      height: $height-l;
+      line-height: $height-l;
+   }
+
+   &.jf--primary {
+      @include btn-color($primary, $text-on-color);
+   }
+
+   &.jf--secondary {
+      @include btn-color($secondary, $text-on-color);
+   }
+
+   &.jf--tertiary {
+      @include btn-color($tertiary, $text-on-color);
+   }
+
+   &.jf--error {
+      @include btn-color($error, $text-on-color);
+   }
+}
+.jf--card {
+   background-color: $background;
+   border-radius: $default-border-radius;
+   margin: 16px;
+   padding: 16px;
+   @include box-shadow(0 0 2px 0 rgba($background-inverse, 0.75));
+   &.jf--with-hover:hover, &.jf--with-hover:focus {
+      @include box-shadow(0 0 4px 0 rgba($background-inverse, 0.75));
+   }
+
+   &.jf--with-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+      .jf--card-content {
+         flex-grow: 1;
+         width: 100%;
+         padding: 16px;
+      }
+
+      .jf--card-btn {
+         display: inline-block;
+         font-weight: 600;
+         height: $height-2xl;
+         line-height: $height-2xl;
+         text-align: center;
+         width: 100%;
+         color: $primary;
+         border-top: 1px solid rgba($background-inverse, 0.2);
+         &:hover {
+            cursor: pointer;
+            background-color: $primary;
+            color: $text-on-color;
+         }
+         &.jf--secondary {
+            color: $secondary;
+            &:hover {
+               background-color: $secondary;
+               color: $text-on-color;
+            }
+         }
+         &.jf--tertiary {
+            color: $tertiary;
+            &:hover {
+               background-color: $tertiary;
+               color: $text-on-color;
+            }
+         }
+      }
+   }
+
+   &.jf--primary {
+      background-color: $primary;
+      color: $text-on-color; 
+      *, &.jf--with-btn .jf--card-btn {
+         color: $text-on-color; 
+      }
+
+      &.jf--with-btn .jf--card-btn {
+         border-top: 1px solid rgba($text-on-color, 0.2);
+         &:hover {
+            background-color: $background;
+            color: $primary;
+         }
+      }
+   }
+
+   &.jf--secondary {
+      background-color: $secondary;
+      color: $text-on-color; 
+      *, &.jf--with-btn .jf--card-btn {
+         color: $text-on-color; 
+      }
+
+      &.jf--with-btn .jf--card-btn {
+         border-top: 1px solid rgba($text-on-color, 0.2);
+         &:hover {
+            background-color: $background;
+            color: $secondary;
+         }
+      }
+   }
+
+   &.jf--tertiary {
+      background-color: $tertiary;
+      color: $text-on-color; 
+      *, &.jf--with-btn .jf--card-btn {
+        color: $text-on-color; 
+      }
+      
+      &.jf--with-btn .jf--card-btn {
+         border-top: 1px solid rgba($text-on-color, 0.2);
+         &:hover {
+            background-color: $background;
+            color: $tertiary;
+         }
+      }
+   }
+}
+table.jf--table {
+   border-collapse: collapse;
+   &.jf--full-width {
+      width: 100%;
+   }
+   tr {
+      padding: 0;
+      border: 1px solid rgba($background-inverse, 0.4);
+      &:nth-child(odd) {
+         td {
+            background-color: darken($background, 5);
+         }
+      }
+   }
+
+   td, th {
+      padding: 6px;
+      line-height: $height-m;
+      text-align: left;
+      &.jf--checkbox {
+         padding-top: 0;
+         padding-bottom: 0;
+         width: $height-2xl;
+         .jf--form-item {
+            margin: 0;
+            height: $height-l; 
+            label {
+               margin: 0;
+            }
+         }
+      }
+   }
+
+} 
 @mixin tag-mixin($color) {
    background-color: rgba($color, 0.4);
    &:hover, &.jf--selected {
