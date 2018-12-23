@@ -102,3 +102,17 @@
       }
    }
 }
+.password-show-button{
+   position: absolute;
+   display: block;
+   top: 1px;
+   height: calc(100% - 2px) ;
+   width:45px;
+   right:2px;
+  @include svg-icon("pw_vis", $text);
+   z-index: 22;
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+// Funktioniert nicht
+}
