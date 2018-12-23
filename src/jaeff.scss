@@ -349,11 +349,11 @@
  }
 
 //! End normalize.css
-$background: #FAFFFD !default;
+$background: #FFFFFF !default;
 $background-inverse: #313638 !default;
 $text: #313628 !default;
-$text-inverse: #FAFFFD !default;
-$text-on-color: #FAFFFD !default;
+$text-inverse: #FFFFFF !default;
+$text-on-color: #FFFFFF !default;
 
 $primary: #4392F1 !default;
 $secondary: #624CAB !default;
@@ -477,9 +477,6 @@ body {
 @import "./layouts/flex";
 @import "./layouts/grid";
 
-@import "./components/buttons";
-@import "./components/cards";
-
 .form-item {
   margin: 6px 0;
   position: relative;
@@ -501,4 +498,7 @@ body {
   @import "./components/select";
 }
 
+@import "./components/buttons";
+@import "./components/cards";
+@import "./components/tables"; 
 @import "./components/tag";

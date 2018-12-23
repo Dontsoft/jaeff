@@ -1,0 +1,34 @@
+table.table {
+   border-collapse: collapse;
+   &.full-width {
+      width: 100%;
+   }
+   tr {
+      padding: 0;
+      border: 1px solid rgba($background-inverse, 0.4);
+      &:nth-child(odd) {
+         td {
+            background-color: darken($background, 5);
+         }
+      }
+   }
+
+   td, th {
+      padding: 6px;
+      line-height: $height-m;
+      text-align: left;
+      &.checkbox {
+         padding-top: 0;
+         padding-bottom: 0;
+         width: $height-2xl;
+         .form-item {
+            margin: 0;
+            height: $height-l; 
+            label {
+               margin: 0;
+            }
+         }
+      }
+   }
+
+}
