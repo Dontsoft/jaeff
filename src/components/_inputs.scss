@@ -82,7 +82,7 @@
 
 &.password-input-wrapper {
    @include input-wrapper();
-   & > input[type="password"] {
+   & > input[type="password"], & > input[type="text"] {
       width: 100%;
       height: $height-xl;
       line-height: $height-xl;
@@ -99,6 +99,23 @@
       &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
          box-shadow: none;
          border-bottom: 1px solid $error;
+      }
+   }
+   .password-show-btn {
+      position: absolute;
+      display: block;
+      bottom: 8px;
+      height: 24px;
+      width: 24px;
+      right: 12px;
+      z-index: 1;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      @include svg-icon("show", $text);
+      cursor: pointer;
+      &.visible {
+         @include svg-icon("hide", $text);
       }
    }
 }
