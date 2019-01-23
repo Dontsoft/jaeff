@@ -399,8 +399,8 @@ $height-2xl: 48px !default;
    transition: $transition;
 }
 
-@import "./functions.scss";
-@import "./icons.scss";
+@import "./functions";
+@import "./icons";
 
 *,
 *:before,
