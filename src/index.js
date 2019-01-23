@@ -41,4 +41,18 @@ $(document).ready( () => {
          $(this).toggleClass('jf--visible');
       });
    });
+   $(".jf--password-input-wrapper").each(function() {
+      let input = $(this).children('input')[0];
+      let btn = $(this).children(".jf--password-show-btn")[0];
+      if (btn && input) {
+         $(btn).on('click', function() {
+            if ($(this).hasClass('jf--visible')) {
+               $(input).attr('type', 'password');
+            } else {
+               $(input).attr('type', 'text');
+            }
+            $(this).toggleClass('jf--visible');
+         })
+      }
+   });
 });
