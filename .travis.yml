@@ -1,28 +1,21 @@
 language: node_js
-
 node_js:
-  - 'lts/*'
-
+- lts/*
 before_install:
-  - npm i -g npm@6.4.1
-  - npm i -g gulp-cli
-  
+- npm i -g npm@6.4.1
+- npm i -g gulp-cli
 cache: npm
-
 branches:
   only:
-    - master
-
+  - master
 script: gulp
-
-before_deploy: "echo 'deploying'"
-
+before_deploy: echo 'deploying'
 deploy:
   provider: npm
-  email: "artem@dontsoft.com"
-  api_key: "ea9b709f-8aff-42fd-9eed-06f1e241476e"
+  email: artem@dontsoft.com
+  api_key:
+    secure: fxjCm57zmYftaOfy981YI9D/3HwdEIdyPtX39ZPdjjIPhkd9SamKbeZPRWZo0Zj5M+8xRVeNQjES6FyrbLQgwt0KpOrPNi6JecYEaTS2UABIaiKX8MUqSruUxViUL5Np3LQZ7EiLYrKtfu/uuOLgKqPoyqnl/1EFV5FJJpSp5tDB7ilK5uDFABgbFcju5exNDVBh56v38u9pAOvlAEvKKHKybKq5T4aIxygg74YlrcLsqP88SrpShflKjLAznZn2E0ToD2MjG5t/TZO5vEbWMY93WE5MjL/0/ai3LEAKvtSkrZ38GxLGS88CIOfxI289dLzHJfvWUlho62PhTWtkZPHn1+rTV5kXb3cK0a0eO8C5Hg8S1EsKjIQHNURqBKQ2PTAAtFMPzjdWWhPhBuX7y4dgGWkIlMHQj4zwvgKrYHCHL4ArEvF7vcpHK4/lbtNdkt5djOfNSl/a7rGnuJicHe7Sh5s3GyKBfStE0NiSlM9M42mJqHssJtVXldZGwZ7eb8TJOT7xQVs+DiSnGX1DaEU6AIKBKGDSv6EFkgwpqhi+7/bFf4hUbKYnorQzFQIubqrP6byOhO71LGOtsH8OV00q3FgwrfJ6rjVyUgAS6Ggv+h+6bbRiyhng+O08Kn6K7CiA4aCDBi7pa7JISFCLiTqA7xnhmx3ZQnG5mkbl8zY=
   skip_cleanup: true
   on:
     branch: master
-
-after_deploy: "echo 'finished deploying'"
+after_deploy: echo 'finished deploying'
