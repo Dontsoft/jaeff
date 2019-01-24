@@ -20,7 +20,7 @@ before_deploy: "echo 'deploying'"
 deploy:
   provider: npm
   email: "artem@dontsoft.com"
-  api_key: "bc589849-926b-498f-9cbb-9d06afe7da5d"
+  api_key: "ea9b709f-8aff-42fd-9eed-06f1e241476e"
   skip_cleanup: true
   on:
     branch: master
