@@ -7,14 +7,16 @@
    <title>Example document</title>
 </head>
 <body>
-   <h1>Header 1</h1>
-   <h2>Header 2</h2>
-   <h3>Header 3</h3>
-   <h4>Header 4</h4>
-   <h5>Header 5</h5>
-   <h6>Header 6</h6>
+   <section class="jf--section jf--padded">
+      <h1>Header 1</h1>
+      <h2>Header 2</h2>
+      <h3>Header 3</h3>
+      <h4>Header 4</h4>
+      <h5>Header 5</h5>
+      <h6>Header 6</h6>
+   </section>
 
-   <section>
+   <section class="jf--section jf--padded">
       <h3>Buttons Normal</h3>
       <div class="jf--row jf--start">
          <span class="jf--btn jf--primary">Button</span>
@@ -25,7 +27,7 @@
       </div>
    </section>
 
-   <section>
+   <section class="jf--section jf--padded">
       <h3>Buttons Normal Bordered</h3>
       <div class="jf--row jf--start">
          <span class="jf--btn jf--primary jf--bordered">Button</span>
@@ -36,7 +38,7 @@
       </div>
    </section>
 
-   <section>
+   <section class="jf--section jf--padded">
       <h3>Buttons Slim</h3>
       <div class="jf--row jf--start">
          <span class="jf--btn jf--primary jf--slim">Button</span>
@@ -47,7 +49,7 @@
       </div>
    </section>
 
-   <section>
+   <section class="jf--section jf--padded">
       <h3>Buttons Slim Bordered</h3>
       <div class="jf--row jf--start">
          <span class="jf--btn jf--primary jf--slim jf--bordered">Button</span>
@@ -58,7 +60,63 @@
       </div>
    </section>
 
-   <section>
+   <section class="jf--section jf--padded jf--bg-primary">
+      <h3 class="jf--text-on-color">Buttons Inverse Primary</h3>
+      <div class="jf--row jf--start">
+         <div class="jf--btn jf--inverse-primary">Button</div>
+         <div class="jf--btn jf--inverse-primary jf--bordered">Button</div>
+         <div class="jf--btn jf--inverse-primary jf--slim">Button</div>
+         <div class="jf--btn jf--inverse-primary jf--slim jf--bordered">Button</div>
+         <div class="jf--btn jf--inverse-primary jf--disabled">Button</div>
+         <div class="jf--btn jf--inverse-primary jf--bordered jf--disabled">Button</div>
+         <div class="jf--btn jf--inverse-primary jf--slim jf--disabled">Button</div>
+         <div class="jf--btn jf--inverse-primary jf--slim jf--bordered jf--disabled">Button</div>
+      </div>  
+   </section>
+
+   <section class="jf--section jf--padded jf--bg-secondary">
+      <h3 class="jf--text-on-color">Buttons Inverse Secondary</h3>
+      <div class="jf--row jf--start">
+         <div class="jf--btn jf--inverse-secondary">Button</div>
+         <div class="jf--btn jf--inverse-secondary jf--bordered">Button</div>
+         <div class="jf--btn jf--inverse-secondary jf--slim">Button</div>
+         <div class="jf--btn jf--inverse-secondary jf--slim jf--bordered">Button</div>
+         <div class="jf--btn jf--inverse-secondary jf--disabled">Button</div>
+         <div class="jf--btn jf--inverse-secondary jf--bordered jf--disabled">Button</div>
+         <div class="jf--btn jf--inverse-secondary jf--slim jf--disabled">Button</div>
+         <div class="jf--btn jf--inverse-secondary jf--slim jf--bordered jf--disabled">Button</div>
+      </div>  
+   </section>
+   
+   <section class="jf--section jf--padded jf--bg-tertiary">
+      <h3 class="jf--text-on-color">Buttons Inverse Tertiary</h3>
+      <div class="jf--row jf--start">
+         <div class="jf--btn jf--inverse-tertiary">Button</div>
+         <div class="jf--btn jf--inverse-tertiary jf--bordered">Button</div>
+         <div class="jf--btn jf--inverse-tertiary jf--slim">Button</div>
+         <div class="jf--btn jf--inverse-tertiary jf--slim jf--bordered">Button</div>
+         <div class="jf--btn jf--inverse-tertiary jf--disabled">Button</div>
+         <div class="jf--btn jf--inverse-tertiary jf--bordered jf--disabled">Button</div>
+         <div class="jf--btn jf--inverse-tertiary jf--slim jf--disabled">Button</div>
+         <div class="jf--btn jf--inverse-tertiary jf--slim jf--bordered jf--disabled">Button</div>
+      </div>  
+   </section>
+
+   <section class="jf--section jf--padded jf--bg-error">
+      <h3 class="jf--text-on-color">Buttons Inverse Error</h3>
+      <div class="jf--row jf--start">
+         <div class="jf--btn jf--inverse-error">Button</div>
+         <div class="jf--btn jf--inverse-error jf--bordered">Button</div>
+         <div class="jf--btn jf--inverse-error jf--slim">Button</div>
+         <div class="jf--btn jf--inverse-error jf--slim jf--bordered">Button</div>
+         <div class="jf--btn jf--inverse-error jf--disabled">Button</div>
+         <div class="jf--btn jf--inverse-error jf--bordered jf--disabled">Button</div>
+         <div class="jf--btn jf--inverse-error jf--slim jf--disabled">Button</div>
+         <div class="jf--btn jf--inverse-error jf--slim jf--bordered jf--disabled">Button</div>
+      </div>  
+   </section>
+
+   <section class="jf--section jf--padded">
       <h3>Cards</h3>
       <div class="jf--row jf--start">
          <div class="jf--card" style="height: 250px; width: 250px;">
@@ -79,7 +137,7 @@
       </div>
    </section>
 
-   <section>
+   <section class="jf--section jf--padded">
       <h3>Cards with Button</h3>
       <div class="jf--row jf--start">
          <div class="jf--card jf--with-btn" style="height: 250px; width: 250px;">
@@ -121,7 +179,7 @@
       </div>
    </section>
 
-   <section>
+   <section class="jf--section jf--padded">
       <h3>Checkbox</h3>
       <div class="jf--column">
          <div class="jf--form-item jf--checkbox-input-wrapper">            
@@ -139,7 +197,7 @@
       </div>
    </section>
 
-   <section>
+   <section class="jf--section jf--padded">
       <h3>Radiobutton</h3>
       <div class="jf--column">
          <div class="jf--form-item jf--radio-input-wrapper">
@@ -153,7 +211,7 @@
       </div>
    </section>
 
-   <section>
+   <section class="jf--section jf--padded">
       <h3>Tags</h3>
       <div class="jf--row">
          <span class="jf--tag">Tag 1</span>
@@ -166,27 +224,39 @@
       </div>
    </section>
    
-   <section>
-      <h3>Inputs</h3>
+   <section class="jf--section jf--padded">
+      <h3>Inputs (Standard)</h3>
       <div class="jf--column">
-         <div class="jf--form-item jf--text-input-wrapper">
+         <div class="jf--form-item jf--standard">
             <label for="text-input" >Text input</label>
             <input id="text-input" type="text">
          </div>
-         <div class="jf--form-item jf--text-input-wrapper">
+         <div class="jf--form-item jf--standard">
             <label for="long-text-input" >Large Text input</label>
             <textarea id="long-text-input"></textarea>
          </div>
-         <div class="jf--form-item jf--email-input-wrapper">
+         <div class="jf--form-item jf--standard">
             <label for="email-input" >E-Mail input</label>
             <input id="email-input" type="email">
          </div>
-         <div class="jf--form-item jf--password-input-wrapper">
+         <div class="jf--form-item jf--standard">
             <label for="password-input" >Password input</label>
             <input id="password-input" type="password">
-            <span class="jf--password-show-btn"></span>
          </div>
-         <div class="jf--form-item jf--select-input-wrapper">
+         <div class="jf--form-item jf--standard jf--pwd-wrapper">
+            <label for="password-input-2" >Password input (With show)</label>
+            <input id="password-input-2" type="password">
+            <span class="jf--pwd-show-btn"></span>
+         </div>
+         <div class="jf--form-item jf--standard">
+            <label for="date-input">Date input</label>
+            <input id="date-input" type="date">
+         </div>
+         <div class="jf--form-item jf--standard">
+            <label for="time-input">Time input</label>
+            <input id="time-input" type="time">
+         </div>
+         <div class="jf--form-item jf--standard jf--select-wrapper">
             <label for="select-input">Select</label>
             <select id="select-input">
                <option value="volvo">Volvo</option>
@@ -195,7 +265,7 @@
                <option value="audi">Audi</option>
             </select>
          </div>
-         <div class="jf--form-item jf--dropdown-input-wrapper">
+         <div class="jf--form-item jf--standard jf--dropdown-wrapper">
             <label for="dropdown-input">Dropdown</label>
             <div id="dropdown-input" class="jf--dropdown" data-value="">
                <span class="jf--dropdown-text"></span>
@@ -209,7 +279,62 @@
       </div>
    </section>
 
-   <section>
+   <section class="jf--section jf--padded">
+      <h3>Inputs (Boxed)</h3>
+      <div class="jf--column">
+         <div class="jf--form-item jf--boxed">
+            <label for="text-input-boxed" >Text input</label>
+            <input id="text-input-boxed" type="text">
+         </div>
+         <div class="jf--form-item jf--boxed">
+            <label for="long-text-input-boxed" >Large Text input</label>
+            <textarea id="long-text-input-boxed"></textarea>
+         </div>
+         <div class="jf--form-item jf--boxed">
+            <label for="email-input-boxed" >E-Mail input</label>
+            <input id="email-input-boxed" type="email">
+         </div>
+         <div class="jf--form-item jf--boxed">
+            <label for="password-input-boxed" >Password input</label>
+            <input id="password-input-boxed" type="password">
+         </div>
+         <div class="jf--form-item jf--boxed jf--pwd-wrapper">
+            <label for="password-input-boxed-2" >Password input (With show)</label>
+            <input id="password-input-boxed-2" type="password">
+            <span class="jf--pwd-show-btn"></span>
+         </div>
+         <div class="jf--form-item jf--boxed">
+            <label for="date-input-boxed">Date input</label>
+            <input id="date-input-boxed" type="date">
+         </div>
+         <div class="jf--form-item jf--boxed">
+            <label for="time-input-boxed">Time input</label>
+            <input id="time-input-boxed" type="time">
+         </div>
+         <div class="jf--form-item jf--boxed jf--select-wrapper">
+            <label for="select-input-boxed">Select</label>
+            <select id="select-input-boxed">
+               <option value="volvo">Volvo</option>
+               <option value="saab">Saab</option>
+               <option value="mercedes">Mercedes</option>
+               <option value="audi">Audi</option>
+            </select>
+         </div>
+         <div class="jf--form-item jf--boxed jf--dropdown-wrapper">
+            <label for="dropdown-input-boxed">Dropdown</label>
+            <div id="dropdown-input-boxed" class="jf--dropdown" data-value="">
+               <span class="jf--dropdown-text"></span>
+               <div class="jf--dropdown-item-wrapper">
+                  <div class="jf--dropdown-item" data-value="">Input 1</div>
+                  <div class="jf--dropdown-item" data-value="">Input 2</div>
+                  <div class="jf--dropdown-item" data-value="">Input 3</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="jf--section jf--padded">
       <h3>Tables</h3>
       <h4>Basic</h4>
       <table class="jf--table">
@@ -376,19 +501,9 @@
          </tbody>
       </table>
    </section>
-
-   <link rel="stylesheet" href="./dist/dev/css/jaeff-fonts.css">
    <link rel="stylesheet" href="./dist/dev/css/jaeff.css">
    <script src="./dist/dev/jaeff.js"></script>
-   <style>
-      body {
-         padding: 0 25%;
-      }
 
-      section {
-         width: 100%;
-         margin: 50px 0;
-      }
-   </style>
+   <link rel="stylesheet" href="./dist/dev/css/jaeff-fonts.css">
 </body>
 </html>

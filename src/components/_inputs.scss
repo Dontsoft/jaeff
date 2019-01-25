@@ -1,24 +1,19 @@
-@mixin input-wrapper {
+
+& {
    display: -webkit-flex;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-}
 
-&.text-input-wrapper {
-   @include input-wrapper();
-   & > label {
-      height: 18px;
-      line-height: $height-s;
-      margin-bottom: 6px;
-      font-weight: 600;
-   }
-
-   & > input[type="text"] {
+   &.standard > input[type="text"],
+   &.standard > textarea,
+   &.standard > input[type="email"],
+   &.standard > input[type="password"],
+   &.standard > input[type="date"],
+   &.standard > input[type="time"] {
       width: 100%;
-      height: 40px;
-      line-height: $height-l;
-      padding: 0 12px;
+      line-height: $height-m;
+      padding: $height-2xs $height-xs;
       background-color: rgba(darken($primary, 5), 0.05);
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
@@ -27,95 +22,60 @@
       &:hover, &:focus {
          border-bottom: 1px solid $primary;
       }
-   
+      
       &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
          box-shadow: none;
          border-bottom: 1px solid $error;
       }
    }
 
+   &.boxed > input[type="text"],
+   &.boxed > textarea,
+   &.boxed > input[type="email"],
+   &.boxed > input[type="password"],
+   &.boxed > input[type="date"],
+   &.boxed > input[type="time"] {
+      width: 100%;
+      line-height: $height-m;
+      padding: $height-2xs $height-xs;
+      border: 1px solid rgba($background-inverse, 0.1);
+      border-radius: $default-border-radius;
+
+      &:hover {
+         border: 1px solid rgba($background-inverse, 0.4);
+      }
+
+      &:focus {
+         border: 1px solid rgba($primary, 0.8);
+      }
+      
+      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
+         box-shadow: none;
+         border: 1px solid rgba($error, 0.8);
+      }
+   }
+
+   &.pwd-wrapper {
+      .pwd-show-btn {
+         position: absolute;
+         display: block;
+         bottom: $height-2xs;
+         height: $height-m;
+         width: $height-m;
+         right: $height-xs;
+         z-index: 1;
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         @include svg-icon("show", $text);
+         cursor: pointer;
+         &.visible {
+            @include svg-icon("hide", $text);
+         }
+      }
+   }
    & > textarea {
-      width: 100%;
-      min-height: $height-l;
-      line-height: $height-l;
-      padding: 0 12px;
-      background-color: rgba(darken($primary, 5), 0.05);
-      border-top-left-radius: $default-border-radius;
-      border-top-right-radius: $default-border-radius;
-      border: none;
-      border-bottom: 1px solid rgba($background-inverse, 0.4);
+      min-height: $height-2xl;
       resize: vertical;
-      &:hover, &:focus {
-         border-bottom: 1px solid $primary;
-      }
-   
-      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
-         box-shadow: none;
-         border-bottom: 1px solid $error;
-      }
-   }
-}
-
-&.email-input-wrapper {
-   @include input-wrapper();
-
-   & > input[type="email"] {
-      width: 100%;
-      height: $height-xl;
-      line-height: $height-xl;
-      padding: 0 12px;
-      background-color: rgba(darken($primary, 5), 0.05);
-      border-top-left-radius: $default-border-radius;
-      border-top-right-radius: $default-border-radius;
-      border: none;
-      border-bottom: 1px solid rgba($background-inverse, 0.4);
-      &:hover, &:focus {
-         border-bottom: 1px solid $primary;
-      }
-   
-      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
-         box-shadow: none;
-         border-bottom: 1px solid $error;
-      }
-   }
-}
-
-&.password-input-wrapper {
-   @include input-wrapper();
-   & > input[type="password"], & > input[type="text"] {
-      width: 100%;
-      height: $height-xl;
-      line-height: $height-xl;
-      padding: 0 12px;
-      background-color: rgba(darken($primary, 5), 0.05);
-      border-top-left-radius: $default-border-radius;
-      border-top-right-radius: $default-border-radius;
-      border: none;
-      border-bottom: 1px solid rgba($background-inverse, 0.4);
-      &:hover, &:focus {
-         border-bottom: 1px solid $primary;
-      }
-   
-      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
-         box-shadow: none;
-         border-bottom: 1px solid $error;
-      }
-   }
-   .password-show-btn {
-      position: absolute;
-      display: block;
-      bottom: 8px;
-      height: 24px;
-      width: 24px;
-      right: 12px;
-      z-index: 1;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      @include svg-icon("show", $text);
-      cursor: pointer;
-      &.visible {
-         @include svg-icon("hide", $text);
-      }
    }
 }

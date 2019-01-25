@@ -41,9 +41,9 @@ $(document).ready( () => {
          $(this).toggleClass('jf--visible');
       });
    });
-   $(".jf--password-input-wrapper").each(function() {
+   $(".jf--pwd-wrapper").each(function() {
       let input = $(this).children('input')[0];
-      let btn = $(this).children(".jf--password-show-btn")[0];
+      let btn = $(this).children(".jf--pwd-show-btn")[0];
       if (btn && input) {
          $(btn).on('click', function() {
             if ($(this).hasClass('jf--visible')) {

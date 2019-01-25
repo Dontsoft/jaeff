@@ -7,12 +7,35 @@
  }
 
 @function svg-inline($string){
-   $result: str-replace($string, '%', '%25');
-   $result: str-replace($result, '#', '%23');
-   $result: str-replace($result, '"', '%22');
-   $result: str-replace($result, "'", '%27');
-   $result: str-replace($result, ' ', '%20');
-   $result: str-replace($result, '<', '%3C');
-   $result: str-replace($result, '>', '%3E');
-   @return $result;
- }
+  $result: str-replace($string, '%', '%25');
+  $result: str-replace($result, '#', '%23');
+  $result: str-replace($result, '"', '%22');
+  $result: str-replace($result, "'", '%27');
+  $result: str-replace($result, ' ', '%20');
+  $result: str-replace($result, '<', '%3C');
+  $result: str-replace($result, '>', '%3E');
+  @return $result;
+}
+@mixin box-sizing($sizing) {
+  -webkit-box-sizing: $sizing;
+  -moz-box-sizing: $sizing;
+  box-sizing: $sizing;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin box-shadow2($shadow1, $shadow2) {
+  -webkit-box-shadow: $shadow1, $shadow2;
+  -moz-box-shadow: $shadow1, $shadow2;
+  box-shadow: $shadow1, $shadow2;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  transition: $transition;
+}
