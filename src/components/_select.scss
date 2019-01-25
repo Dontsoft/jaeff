@@ -1,21 +1,20 @@
-&.select-input-wrapper {
+&.select-wrapper {
    display: -webkit-flex;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
    position: relative;
 
-   & > select {
+   &.standard > select {
       appearance: none;
       border: none;
       &::-ms-expand {
          display: none;
       }
       width: 100%;
-      height: $height-l;
-      line-height: $height-l;
-      padding: 0 12px;
-      padding-right: 48px;
+      line-height: $height-m;
+      padding: $height-2xs $height-xs;
+      padding-right: $height-2xl;
       background-color: rgba(darken($primary, 5), 0.05);
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
@@ -28,6 +27,34 @@
       &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
          box-shadow: none;
          border-bottom: 1px solid $error;
+      }
+   }
+
+   &.boxed > select {
+      appearance: none;
+      border: none;
+      &::-ms-expand {
+         display: none;
+      }
+      width: 100%;
+      line-height: $height-m;
+      padding: $height-2xs $height-xs;
+      padding-right: $height-2xl;
+
+      border: 1px solid rgba($background-inverse, 0.1);
+      border-radius: $default-border-radius;
+
+      &:hover {
+         border: 1px solid rgba($background-inverse, 0.4);
+      }
+
+      &:focus {
+         border: 1px solid rgba($primary, 0.8);
+      }
+      
+      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
+         box-shadow: none;
+         border: 1px solid rgba($error, 0.8);
       }
    }
 
