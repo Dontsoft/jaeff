@@ -79,8 +79,9 @@ gulp.task('styles:dev', gulp.series('styles:dev:clean', () => {
 gulp.task('styles', gulp.series('styles:clean', () => {
    const jaeff = compileSCSS('src/jaeff.scss', true, true);
    const jaeffFonts = compileSCSS('src/jaeff-fonts.scss', false, true);
+   const jaeffFunctions = compileSCSS('src/_functions.scss', false, true);
    const rawSCSS = combineSCSS('src/*.scss', false);
-   return merge(jaeff, jaeffFonts, rawSCSS);
+   return merge(jaeff, jaeffFonts, jaeffFunctions, rawSCSS);
 }));
 
 gulp.task('scripts:dev:clean', () => {

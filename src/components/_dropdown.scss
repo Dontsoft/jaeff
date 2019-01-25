@@ -1,15 +1,10 @@
-&.dropdown-input-wrapper {
+&.dropdown-wrapper {
    display: -webkit-flex;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
 
-   & > .dropdown {
-      width: 100%;
-      height: $height-xl;
-      line-height: $height-xl;
-      padding: 0 12px;
-      padding-right: 48px;
+   &.standard > .dropdown {
       background-color: rgba(darken($primary, 5), 0.05);
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
@@ -18,25 +13,48 @@
       &:hover, &:focus {
          border-bottom: 1px solid $primary;
       }
-   
+      
       &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
          box-shadow: none;
          border-bottom: 1px solid $error;
       }
+   }
 
+   &.boxed > .dropdown {
+      border: 1px solid rgba($background-inverse, 0.1);
+      border-radius: $default-border-radius;
+
+      &:hover {
+         border: 1px solid rgba($background-inverse, 0.4);
+      }
+
+      &:focus {
+         border: 1px solid rgba($primary, 0.8);
+      }
+      
+      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
+         box-shadow: none;
+         border: 1px solid rgba($error, 0.8);
+      }
+   }
+   & > .dropdown {
+      width: 100%;
+      line-height: $height-m;
+      padding: $height-2xs $height-xs;
+      padding-right: $height-2xl;
       position: relative;
       &::before {
          content: '';
          display: inline-block;
          position: absolute;
-         height: 24px;
-         width: 24px;
+         height: $height-m;
+         width: $height-m;
          background-size: contain;
          background-position: center;
          background-repeat: no-repeat;
          @include svg-icon("down", $text);
-         right: 12px;
-         bottom: 8px;
+         right: $height-xs;
+         bottom: $height-2xs;
          z-index: 1;
          pointer-events: none;
       }
@@ -47,10 +65,10 @@
          flex-direction: column;
          align-items: flex-start;
          position: absolute;
-         top: 40px;
+         top: $height-xl;
          left: 0;
          width: 100%;
-         min-height: 40px;
+         min-height: $height-xl;
          max-height: 200px;
          z-index: 100;
          background-color: $background;
@@ -58,16 +76,30 @@
             width: 100%;
             height: $height-l;
             line-height: $height-l;
-            padding: 0 12px 0 48px;
+            padding: 0 $height-xs 0 $height-2xl;
             &:hover {
                background-color: rgba($primary, 0.2);
                cursor: pointer;
             }
          }
       }
-      &.visible > .dropdown-item-wrapper {
-         display: -webkit-flex;
-         display: flex;
+      &.visible {
+
+         &.boxed {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+         }
+         & > .dropdown-item-wrapper {
+            display: -webkit-flex;
+            display: flex;
+         }
+      }
+   }
+
+   &.boxed > .dropdown {
+      &.visible {
+         border-bottom-left-radius: 0;
+         border-bottom-right-radius: 0;
       }
    }
 }

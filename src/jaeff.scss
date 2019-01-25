@@ -369,35 +369,21 @@ $data-viz-6: #CFDEE7 !default;
 
 $default-border-radius: 2px !default;
 
+$height-2xs: 8px !default;
+$height-xs: 12px !default;
 $height-s: 18px !default;
 $height-m: 24px !default;
 $height-l: 36px !default;
 $height-xl: 40px !default;
 $height-2xl: 48px !default;
 
-@mixin box-sizing($sizing) {
-   -webkit-box-sizing: $sizing;
-   -moz-box-sizing: $sizing;
-   box-sizing: $sizing;
-}
-
-@mixin box-shadow($shadow) {
-   -webkit-box-shadow: $shadow;
-   -moz-box-shadow: $shadow;
-   box-shadow: $shadow;
-}
-
-@mixin box-shadow2($shadow1, $shadow2) {
-   -webkit-box-shadow: $shadow1, $shadow2;
-   -moz-box-shadow: $shadow1, $shadow2;
-   box-shadow: $shadow1, $shadow2;
-}
-
-@mixin transition($transition) {
-   -webkit-transition: $transition;
-   -moz-transition: $transition;
-   transition: $transition;
-}
+$screen-s: 480px !default;
+$screen-m: 768px !default;
+$screen-l: 1048px !default;
+$screen-xl: 1440px !default;
+$screen-s-max: calc($screen-m - 1);
+$screen-m-max: calc($screen-l - 1);
+$screen-l-max: calc($screen-xl - 1);
 
 @import "./functions";
 @import "./icons";
@@ -472,6 +458,36 @@ body {
 
 .text-on-color {
   color: $text-on-color;
+}
+
+.section {
+  width: 100vw;
+  padding: $height-xl;
+  @media screen and (max-width: $screen-s-max) {
+     padding: $height-s;
+  }
+  &.no-pad {
+     padding: 0;
+  }
+
+  &.nearly-full-height {
+     min-height: 80vh;
+     @media screen and (max-height: $screen-m-max) {
+        min-height: $screen-l-max;
+     }
+  }
+  &.full-height {
+     min-height: 100vh;
+     @media screen and (max-height: $screen-m-max) {
+        min-height: $screen-l-max;
+     }
+  }
+  &.padded {
+      padding: $height-xl 15%;
+      @media screen and (max-width: $screen-m-max) {
+          padding: $height-xl;
+      }
+  }
 }
 
 @import "./layouts/flex";
