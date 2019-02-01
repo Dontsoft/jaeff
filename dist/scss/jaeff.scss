@@ -1,354 +1,6 @@
-/*! normalize.jf--css v8.0.1 | MIT License | github.com/necolas/normalize.jf--css */
 
-/* Document
-   ========================================================================== */
 
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
 
- html {
-   line-height: 1.15; /* 1 */
-   -webkit-text-size-adjust: 100%; /* 2 */
- }
- 
- /* Sections
-    ========================================================================== */
- 
- /**
-  * Remove the margin in all browsers.
-  */
- 
- body {
-   margin: 0;
- }
- 
- /**
-  * Render the `main` element consistently in IE.
-  */
- 
- main {
-   display: block;
- }
- 
- /**
-  * Correct the font size and margin on `h1` elements within `section` and
-  * `article` contexts in Chrome, Firefox, and Safari.
-  */
- 
- h1 {
-   font-size: 2em;
-   margin: 0.67em 0;
- }
- 
- /* Grouping content
-    ========================================================================== */
- 
- /**
-  * 1. Add the correct box sizing in Firefox.
-  * 2. Show the overflow in Edge and IE.
-  */
- 
- hr {
-   box-sizing: content-box; /* 1 */
-   height: 0; /* 1 */
-   overflow: visible; /* 2 */
- }
- 
- /**
-  * 1. Correct the inheritance and scaling of font size in all browsers.
-  * 2. Correct the odd `em` font sizing in all browsers.
-  */
- 
- pre {
-   font-family: monospace, monospace; /* 1 */
-   font-size: 1em; /* 2 */
- }
- 
- /* Text-level semantics
-    ========================================================================== */
- 
- /**
-  * Remove the gray background on active links in IE 10.
-  */
- 
- a {
-   background-color: transparent;
- }
- 
- /**
-  * 1. Remove the bottom border in Chrome 57-
-  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-  */
- 
- abbr[title] {
-   border-bottom: none; /* 1 */
-   text-decoration: underline; /* 2 */
-   text-decoration: underline dotted; /* 2 */
- }
- 
- /**
-  * Add the correct font weight in Chrome, Edge, and Safari.
-  */
- 
- b,
- strong {
-   font-weight: bolder;
- }
- 
- /**
-  * 1. Correct the inheritance and scaling of font size in all browsers.
-  * 2. Correct the odd `em` font sizing in all browsers.
-  */
- 
- code,
- kbd,
- samp {
-   font-family: monospace, monospace; /* 1 */
-   font-size: 1em; /* 2 */
- }
- 
- /**
-  * Add the correct font size in all browsers.
-  */
- 
- small {
-   font-size: 80%;
- }
- 
- /**
-  * Prevent `sub` and `sup` elements from affecting the line height in
-  * all browsers.
-  */
- 
- sub,
- sup {
-   font-size: 75%;
-   line-height: 0;
-   position: relative;
-   vertical-align: baseline;
- }
- 
- sub {
-   bottom: -0.25em;
- }
- 
- sup {
-   top: -0.5em;
- }
- 
- /* Embedded content
-    ========================================================================== */
- 
- /**
-  * Remove the border on images inside links in IE 10.
-  */
- 
- img {
-   border-style: none;
- }
- 
- /* Forms
-    ========================================================================== */
- 
- /**
-  * 1. Change the font styles in all browsers.
-  * 2. Remove the margin in Firefox and Safari.
-  */
- 
- button,
- input,
- optgroup,
- select,
- textarea {
-   font-family: inherit; /* 1 */
-   font-size: 100%; /* 1 */
-   line-height: 1.15; /* 1 */
-   margin: 0; /* 2 */
- }
- 
- /**
-  * Show the overflow in IE.
-  * 1. Show the overflow in Edge.
-  */
- 
- button,
- input { /* 1 */
-   overflow: visible;
- }
- 
- /**
-  * Remove the inheritance of text transform in Edge, Firefox, and IE.
-  * 1. Remove the inheritance of text transform in Firefox.
-  */
- 
- button,
- select { /* 1 */
-   text-transform: none;
- }
- 
- /**
-  * Correct the inability to style clickable types in iOS and Safari.
-  */
- 
- button,
- [type="button"],
- [type="reset"],
- [type="submit"] {
-   -webkit-appearance: button;
- }
- 
- /**
-  * Remove the inner border and padding in Firefox.
-  */
- 
- button::-moz-focus-inner,
- [type="button"]::-moz-focus-inner,
- [type="reset"]::-moz-focus-inner,
- [type="submit"]::-moz-focus-inner {
-   border-style: none;
-   padding: 0;
- }
- 
- /**
-  * Restore the focus styles unset by the previous rule.
-  */
- 
- button:-moz-focusring,
- [type="button"]:-moz-focusring,
- [type="reset"]:-moz-focusring,
- [type="submit"]:-moz-focusring {
-   outline: 1px dotted ButtonText;
- }
- 
- /**
-  * Correct the padding in Firefox.
-  */
- 
- fieldset {
-   padding: 0.35em 0.75em 0.625em;
- }
- 
- /**
-  * 1. Correct the text wrapping in Edge and IE.
-  * 2. Correct the color inheritance from `fieldset` elements in IE.
-  * 3. Remove the padding so developers are not caught out when they zero out
-  *    `fieldset` elements in all browsers.
-  */
- 
- legend {
-   box-sizing: border-box; /* 1 */
-   color: inherit; /* 2 */
-   display: table; /* 1 */
-   max-width: 100%; /* 1 */
-   padding: 0; /* 3 */
-   white-space: normal; /* 1 */
- }
- 
- /**
-  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
-  */
- 
- progress {
-   vertical-align: baseline;
- }
- 
- /**
-  * Remove the default vertical scrollbar in IE 10+.
-  */
- 
- textarea {
-   overflow: auto;
- }
- 
- /**
-  * 1. Add the correct box sizing in IE 10.
-  * 2. Remove the padding in IE 10.
-  */
- 
- [type="checkbox"],
- [type="radio"] {
-   box-sizing: border-box; /* 1 */
-   padding: 0; /* 2 */
- }
- 
- /**
-  * Correct the cursor style of increment and decrement buttons in Chrome.
-  */
- 
- [type="number"]::-webkit-inner-spin-button,
- [type="number"]::-webkit-outer-spin-button {
-   height: auto;
- }
- 
- /**
-  * 1. Correct the odd appearance in Chrome and Safari.
-  * 2. Correct the outline style in Safari.
-  */
- 
- [type="search"] {
-   -webkit-appearance: textfield; /* 1 */
-   outline-offset: -2px; /* 2 */
- }
- 
- /**
-  * Remove the inner padding in Chrome and Safari on macOS.
-  */
- 
- [type="search"]::-webkit-search-decoration {
-   -webkit-appearance: none;
- }
- 
- /**
-  * 1. Correct the inability to style clickable types in iOS and Safari.
-  * 2. Change font properties to `inherit` in Safari.
-  */
- 
- ::-webkit-file-upload-button {
-   -webkit-appearance: button; /* 1 */
-   font: inherit; /* 2 */
- }
- 
- /* Interactive
-    ========================================================================== */
- 
- /*
-  * Add the correct display in Edge, IE 10+, and Firefox.
-  */
- 
- details {
-   display: block;
- }
- 
- /*
-  * Add the correct display in all browsers.
-  */
- 
- summary {
-   display: list-item;
- }
- 
- /* Misc
-    ========================================================================== */
- 
- /**
-  * Add the correct display in IE 10+.
-  */
- 
- template {
-   display: none;
- }
- 
- /**
-  * Add the correct display in IE 10.
-  */
- 
- [hidden] {
-   display: none;
- }
-
-//! End normalize.jf--css
 $background: #FFFFFF !default;
 $background-inverse: #313638 !default;
 $text: #313628 !default;
@@ -360,6 +12,8 @@ $secondary: #624CAB !default;
 $tertiary: #5bc0eb !default;
 
 $error: #DC493A !default;
+$success: #44AF69 !default;
+
 $data-viz-1: #63A37F !default;
 $data-viz-2: #713E5A !default;
 $data-viz-3: #EAC435 !default;
@@ -369,35 +23,21 @@ $data-viz-6: #CFDEE7 !default;
 
 $default-border-radius: 2px !default;
 
+$height-2xs: 8px !default;
+$height-xs: 12px !default;
 $height-s: 18px !default;
 $height-m: 24px !default;
 $height-l: 36px !default;
 $height-xl: 40px !default;
 $height-2xl: 48px !default;
 
-@mixin box-sizing($sizing) {
-   -webkit-box-sizing: $sizing;
-   -moz-box-sizing: $sizing;
-   box-sizing: $sizing;
-}
-
-@mixin box-shadow($shadow) {
-   -webkit-box-shadow: $shadow;
-   -moz-box-shadow: $shadow;
-   box-shadow: $shadow;
-}
-
-@mixin box-shadow2($shadow1, $shadow2) {
-   -webkit-box-shadow: $shadow1, $shadow2;
-   -moz-box-shadow: $shadow1, $shadow2;
-   box-shadow: $shadow1, $shadow2;
-}
-
-@mixin transition($transition) {
-   -webkit-transition: $transition;
-   -moz-transition: $transition;
-   transition: $transition;
-}
+$screen-s: 480px !default;
+$screen-m: 768px !default;
+$screen-l: 1048px !default;
+$screen-xl: 1440px !default;
+$screen-s-max: calc($screen-m - 1);
+$screen-m-max: calc($screen-l - 1);
+$screen-l-max: calc($screen-xl - 1);
 
 @function str-replace($string, $search, $replace: '') {
    $index: str-index($string, $search);   
@@ -408,15 +48,38 @@ $height-2xl: 48px !default;
  }
 
 @function svg-inline($string){
-   $result: str-replace($string, '%', '%25');
-   $result: str-replace($result, '#', '%23');
-   $result: str-replace($result, '"', '%22');
-   $result: str-replace($result, "'", '%27');
-   $result: str-replace($result, ' ', '%20');
-   $result: str-replace($result, '<', '%3C');
-   $result: str-replace($result, '>', '%3E');
-   @return $result;
- }
+  $result: str-replace($string, '%', '%25');
+  $result: str-replace($result, '#', '%23');
+  $result: str-replace($result, '"', '%22');
+  $result: str-replace($result, "'", '%27');
+  $result: str-replace($result, ' ', '%20');
+  $result: str-replace($result, '<', '%3C');
+  $result: str-replace($result, '>', '%3E');
+  @return $result;
+}
+@mixin box-sizing($sizing) {
+  -webkit-box-sizing: $sizing;
+  -moz-box-sizing: $sizing;
+  box-sizing: $sizing;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin box-shadow2($shadow1, $shadow2) {
+  -webkit-box-shadow: $shadow1, $shadow2;
+  -moz-box-shadow: $shadow1, $shadow2;
+  box-shadow: $shadow1, $shadow2;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  transition: $transition;
+}
 
 @mixin svg-icon($id, $color) {
    @if $id == "add" {
@@ -443,6 +106,13 @@ $height-2xl: 48px !default;
    @if $id == "left" {
       background-image: url(svg-inline('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M31.41,15.41l-9.16,9.18,9.16,9.18-2.82,2.82-12-12,12-12Z" style="fill:' + $color + '"/></svg>'));
    }
+   @if $id == "show" {
+      background-image: url(svg-inline('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" style="fill:' + $color + '"/></svg>'));
+   }
+   @if $id == "hide" {
+      background-image: url(svg-inline('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0z" fill="none"/><path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z" style="fill:' + $color + '"/></svg>'));
+   }
+
 }
 
 *,
@@ -505,6 +175,10 @@ body {
   background-color: $error;
 }
 
+.jf--bg-success {
+  background-color: $success;
+}
+
 .jf--text {
   color: $text;
 }
@@ -515,6 +189,36 @@ body {
 
 .jf--text-on-color {
   color: $text-on-color;
+}
+
+.jf--section {
+  width: 100vw;
+  padding: $height-xl;
+  @media screen and (max-width: $screen-s-max) {
+     padding: $height-s;
+  }
+  &.jf--no-pad {
+     padding: 0;
+  }
+
+  &.jf--nearly-full-height {
+     min-height: 80vh;
+     @media screen and (max-height: $screen-m-max) {
+        min-height: $screen-l-max;
+     }
+  }
+  &.jf--full-height {
+     min-height: 100vh;
+     @media screen and (max-height: $screen-m-max) {
+        min-height: $screen-l-max;
+     }
+  }
+  &.jf--padded {
+      padding: $height-xl 15%;
+      @media screen and (max-width: $screen-m-max) {
+          padding: $height-xl;
+      }
+  }
 }
 
 @mixin flex-base {
@@ -671,18 +375,13 @@ body {
    }
 }
 
-  &.jf--dropdown-input-wrapper {
+  &.jf--dropdown-wrapper {
    display: -webkit-flex;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
 
-   & > .jf--dropdown {
-      width: 100%;
-      height: $height-xl;
-      line-height: $height-xl;
-      padding: 0 12px;
-      padding-right: 48px;
+   &.jf--standard > .jf--dropdown {
       background-color: rgba(darken($primary, 5), 0.05);
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
@@ -691,25 +390,48 @@ body {
       &:hover, &:focus {
          border-bottom: 1px solid $primary;
       }
-   
+      
       &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
          box-shadow: none;
          border-bottom: 1px solid $error;
       }
+   }
 
+   &.jf--boxed > .jf--dropdown {
+      border: 1px solid rgba($background-inverse, 0.1);
+      border-radius: $default-border-radius;
+
+      &:hover {
+         border: 1px solid rgba($background-inverse, 0.4);
+      }
+
+      &:focus {
+         border: 1px solid rgba($primary, 0.8);
+      }
+      
+      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
+         box-shadow: none;
+         border: 1px solid rgba($error, 0.8);
+      }
+   }
+   & > .jf--dropdown {
+      width: 100%;
+      line-height: $height-m;
+      padding: $height-2xs $height-xs;
+      padding-right: $height-2xl;
       position: relative;
       &::before {
          content: '';
          display: inline-block;
          position: absolute;
-         height: 24px;
-         width: 24px;
+         height: $height-m;
+         width: $height-m;
          background-size: contain;
          background-position: center;
          background-repeat: no-repeat;
          @include svg-icon("down", $text);
-         right: 12px;
-         bottom: 8px;
+         right: $height-xs;
+         bottom: $height-2xs;
          z-index: 1;
          pointer-events: none;
       }
@@ -720,10 +442,10 @@ body {
          flex-direction: column;
          align-items: flex-start;
          position: absolute;
-         top: 40px;
+         top: $height-xl;
          left: 0;
          width: 100%;
-         min-height: 40px;
+         min-height: $height-xl;
          max-height: 200px;
          z-index: 100;
          background-color: $background;
@@ -731,40 +453,49 @@ body {
             width: 100%;
             height: $height-l;
             line-height: $height-l;
-            padding: 0 12px 0 48px;
+            padding: 0 $height-xs 0 $height-2xl;
             &:hover {
                background-color: rgba($primary, 0.2);
                cursor: pointer;
             }
          }
       }
-      &.jf--visible > .jf--dropdown-item-wrapper {
-         display: -webkit-flex;
-         display: flex;
+      &.jf--visible {
+
+         &.jf--boxed {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+         }
+         & > .jf--dropdown-item-wrapper {
+            display: -webkit-flex;
+            display: flex;
+         }
+      }
+   }
+
+   &.jf--boxed > .jf--dropdown {
+      &.jf--visible {
+         border-bottom-left-radius: 0;
+         border-bottom-right-radius: 0;
       }
    }
 }
-  @mixin input-wrapper {
+  
+& {
    display: -webkit-flex;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-}
 
-&.jf--text-input-wrapper {
-   @include input-wrapper();
-   & > label {
-      height: 18px;
-      line-height: $height-s;
-      margin-bottom: 6px;
-      font-weight: 600;
-   }
-
-   & > input[type="text"] {
+   &.jf--standard > input[type="text"],
+   &.jf--standard > textarea,
+   &.jf--standard > input[type="email"],
+   &.jf--standard > input[type="password"],
+   &.jf--standard > input[type="date"],
+   &.jf--standard > input[type="time"] {
       width: 100%;
-      height: 40px;
-      line-height: $height-l;
-      padding: 0 12px;
+      line-height: $height-m;
+      padding: $height-2xs $height-xs;
       background-color: rgba(darken($primary, 5), 0.05);
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
@@ -773,81 +504,64 @@ body {
       &:hover, &:focus {
          border-bottom: 1px solid $primary;
       }
-   
+      
       &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
          box-shadow: none;
          border-bottom: 1px solid $error;
       }
    }
 
+   &.jf--boxed > input[type="text"],
+   &.jf--boxed > textarea,
+   &.jf--boxed > input[type="email"],
+   &.jf--boxed > input[type="password"],
+   &.jf--boxed > input[type="date"],
+   &.jf--boxed > input[type="time"] {
+      width: 100%;
+      line-height: $height-m;
+      padding: $height-2xs $height-xs;
+      border: 1px solid rgba($background-inverse, 0.1);
+      border-radius: $default-border-radius;
+
+      &:hover {
+         border: 1px solid rgba($background-inverse, 0.4);
+      }
+
+      &:focus {
+         border: 1px solid rgba($primary, 0.8);
+      }
+      
+      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
+         box-shadow: none;
+         border: 1px solid rgba($error, 0.8);
+      }
+   }
+
+   &.jf--pwd-wrapper {
+      .jf--pwd-show-btn {
+         position: absolute;
+         display: block;
+         bottom: $height-2xs;
+         height: $height-m;
+         width: $height-m;
+         right: $height-xs;
+         z-index: 1;
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         @include svg-icon("show", $text);
+         cursor: pointer;
+         &.jf--visible {
+            @include svg-icon("hide", $text);
+         }
+      }
+   }
    & > textarea {
-      width: 100%;
-      min-height: $height-l;
-      line-height: $height-l;
-      padding: 0 12px;
-      background-color: rgba(darken($primary, 5), 0.05);
-      border-top-left-radius: $default-border-radius;
-      border-top-right-radius: $default-border-radius;
-      border: none;
-      border-bottom: 1px solid rgba($background-inverse, 0.4);
+      min-height: $height-2xl;
       resize: vertical;
-      &:hover, &:focus {
-         border-bottom: 1px solid $primary;
-      }
-   
-      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
-         box-shadow: none;
-         border-bottom: 1px solid $error;
-      }
    }
 }
 
-&.jf--email-input-wrapper {
-   @include input-wrapper();
-
-   & > input[type="email"] {
-      width: 100%;
-      height: $height-xl;
-      line-height: $height-xl;
-      padding: 0 12px;
-      background-color: rgba(darken($primary, 5), 0.05);
-      border-top-left-radius: $default-border-radius;
-      border-top-right-radius: $default-border-radius;
-      border: none;
-      border-bottom: 1px solid rgba($background-inverse, 0.4);
-      &:hover, &:focus {
-         border-bottom: 1px solid $primary;
-      }
-   
-      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
-         box-shadow: none;
-         border-bottom: 1px solid $error;
-      }
-   }
-}
-
-&.jf--password-input-wrapper {
-   @include input-wrapper();
-   & > input[type="password"] {
-      width: 100%;
-      height: $height-xl;
-      line-height: $height-xl;
-      padding: 0 12px;
-      background-color: rgba(darken($primary, 5), 0.05);
-      border-top-left-radius: $default-border-radius;
-      border-top-right-radius: $default-border-radius;
-      border: none;
-      border-bottom: 1px solid rgba($background-inverse, 0.4);
-      &:hover, &:focus {
-         border-bottom: 1px solid $primary;
-      }
-   
-      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
-         box-shadow: none;
-         border-bottom: 1px solid $error;
-      }
-   }
-}
   @mixin radio-size {
    width: 100%;
    height: $height-l;
@@ -892,24 +606,23 @@ body {
       border: 1px solid rgba($text, 0.4);
    }
 }
-  &.jf--select-input-wrapper {
+  &.jf--select-wrapper {
    display: -webkit-flex;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
    position: relative;
 
-   & > select {
+   &.jf--standard > select {
       appearance: none;
       border: none;
       &::-ms-expand {
          display: none;
       }
       width: 100%;
-      height: $height-l;
-      line-height: $height-l;
-      padding: 0 12px;
-      padding-right: 48px;
+      line-height: $height-m;
+      padding: $height-2xs $height-xs;
+      padding-right: $height-2xl;
       background-color: rgba(darken($primary, 5), 0.05);
       border-top-left-radius: $default-border-radius;
       border-top-right-radius: $default-border-radius;
@@ -922,6 +635,34 @@ body {
       &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
          box-shadow: none;
          border-bottom: 1px solid $error;
+      }
+   }
+
+   &.jf--boxed > select {
+      appearance: none;
+      border: none;
+      &::-ms-expand {
+         display: none;
+      }
+      width: 100%;
+      line-height: $height-m;
+      padding: $height-2xs $height-xs;
+      padding-right: $height-2xl;
+
+      border: 1px solid rgba($background-inverse, 0.1);
+      border-radius: $default-border-radius;
+
+      &:hover {
+         border: 1px solid rgba($background-inverse, 0.4);
+      }
+
+      &:focus {
+         border: 1px solid rgba($primary, 0.8);
+      }
+      
+      &.error, &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid {
+         box-shadow: none;
+         border: 1px solid rgba($error, 0.8);
       }
    }
 
@@ -1002,17 +743,32 @@ body {
    &.jf--primary {
       @include btn-color($primary, $text-on-color);
    }
-
    &.jf--secondary {
       @include btn-color($secondary, $text-on-color);
    }
-
    &.jf--tertiary {
       @include btn-color($tertiary, $text-on-color);
    }
-
    &.jf--error {
       @include btn-color($error, $text-on-color);
+   }
+   &.jf--success {
+      @include btn-color($success, $text-on-color);
+   }
+   &.jf--inverse-primary {
+      @include btn-color($text-on-color, $primary);
+   }
+   &.jf--inverse-secondary {
+      @include btn-color($text-on-color, $secondary);
+   }
+   &.jf--inverse-tertiary {
+      @include btn-color($text-on-color, $tertiary);
+   }
+   &.jf--inverse-error {
+     @include btn-color($text-on-color, $error);
+   }
+   &.jf--inverse-success {
+     @include btn-color($text-on-color, $success);
    }
 }
 .jf--card {
@@ -1125,7 +881,7 @@ table.jf--table {
       border: 1px solid rgba($background-inverse, 0.4);
       &:nth-child(odd) {
          td {
-            background-color: darken($background, 5);
+            background-color: rgba($background-inverse, 0.1);
          }
       }
    }

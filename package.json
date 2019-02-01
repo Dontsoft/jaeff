@@ -15,9 +15,7 @@
   },
   "homepage": "https://github.com/Dontsoft/jaeff#readme",
   "dependencies": {
-    "jquery": "^3.3.1",
-    "normalize.css": "^8.0.1",
-    "normalize.scss": "^0.1.0"
+    "jquery": "^3.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",

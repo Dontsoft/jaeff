@@ -24,7 +24,9 @@ function compileSCSS(path, makeSourcemaps, makeClean) {
                .pipe(combine())
                .pipe(namespace())
                .pipe(gulpif(makeSourcemaps, sourcemaps.init()))
-               .pipe(sass().on('error', sass.logError))
+               .pipe(sass({
+                  includePaths: ['node_modules']
+                }).on('error', sass.logError))
                .pipe(postcss([autoprefixer()]))
                .pipe(gulpif(makeClean, clean({compatibility: 'ie8'})))
                .pipe(gulpif(makeSourcemaps, sourcemaps.write('./')))
