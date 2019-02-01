@@ -66,6 +66,9 @@
    &.error {
       @include btn-color($error, $text-on-color);
    }
+   &.success {
+      @include btn-color($success, $text-on-color);
+   }
    &.inverse-primary {
       @include btn-color($text-on-color, $primary);
    }
@@ -77,5 +80,8 @@
    }
    &.inverse-error {
      @include btn-color($text-on-color, $error);
+   }
+   &.inverse-success {
+     @include btn-color($text-on-color, $success);
    }
 }
