@@ -383,9 +383,9 @@ $screen-s: 480px !default;
 $screen-m: 768px !default;
 $screen-l: 1048px !default;
 $screen-xl: 1440px !default;
-$screen-s-max: calc($screen-m - 1);
-$screen-m-max: calc($screen-l - 1);
-$screen-l-max: calc($screen-xl - 1);
+$screen-s-max: calc(#{$screen-m} - 1) !default;
+$screen-m-max: calc(#{$screen-l} - 1) !default;
+$screen-l-max: calc(#{$screen-xl} - 1) !default;
 
 @import "./functions";
 @import "./icons";
