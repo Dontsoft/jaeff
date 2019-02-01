@@ -360,6 +360,8 @@ $secondary: #624CAB !default;
 $tertiary: #5bc0eb !default;
 
 $error: #DC493A !default;
+$success: #44AF69 !default;
+
 $data-viz-1: #63A37F !default;
 $data-viz-2: #713E5A !default;
 $data-viz-3: #EAC435 !default;
@@ -446,6 +448,10 @@ body {
 
 .bg-error {
   background-color: $error;
+}
+
+.bg-success {
+  background-color: $success;
 }
 
 .text {
