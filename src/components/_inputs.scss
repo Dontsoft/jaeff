@@ -10,7 +10,8 @@
    &.standard > input[type="email"],
    &.standard > input[type="password"],
    &.standard > input[type="date"],
-   &.standard > input[type="time"] {
+   &.standard > input[type="time"],
+   &.standard > input[type="number"] {
       width: 100%;
       line-height: $height-m;
       padding: $height-2xs $height-xs;
@@ -34,7 +35,9 @@
    &.boxed > input[type="email"],
    &.boxed > input[type="password"],
    &.boxed > input[type="date"],
-   &.boxed > input[type="time"] {
+   &.boxed > input[type="time"],
+   &.boxed > input[type="number"] {
+      
       width: 100%;
       line-height: $height-m;
       padding: $height-2xs $height-xs;
