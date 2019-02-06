@@ -35,9 +35,11 @@ $screen-s: 480px !default;
 $screen-m: 768px !default;
 $screen-l: 1048px !default;
 $screen-xl: 1440px !default;
+$screen-2xl: 1921px !default;
 $screen-s-max: calc(#{$screen-m} - 1) !default;
 $screen-m-max: calc(#{$screen-l} - 1) !default;
 $screen-l-max: calc(#{$screen-xl} - 1) !default;
+$screen-xl-max: calc(#{$screen-2xl} - 1) !default;
 
 @import "./functions";
 @import "./icons";
@@ -142,6 +144,9 @@ body {
   }
   &.padded {
       padding: $height-xl 15%;
+      @media screen and (min-width: $screen-2xl) {
+        padding: $height-xl 30%;
+      }
       @media screen and (max-width: $screen-m-max) {
           padding: $height-xl;
       }
