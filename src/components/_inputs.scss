@@ -11,7 +11,13 @@
    &.standard > input[type="password"],
    &.standard > input[type="date"],
    &.standard > input[type="time"],
-   &.standard > input[type="number"] {
+   &.standard > input[type="number"],
+   &.standard > input[type="tel"],
+   &.standard > input[type="datetime-local"],
+   &.standard > input[type="month"],
+   &.standard > input[type="search"],
+   &.standard > input[type="week"],
+   &.standard > input[type="url"] {
       width: 100%;
       line-height: $height-m;
       padding: $height-2xs $height-xs;
@@ -36,7 +42,13 @@
    &.boxed > input[type="password"],
    &.boxed > input[type="date"],
    &.boxed > input[type="time"],
-   &.boxed > input[type="number"] {
+   &.boxed > input[type="number"],
+   &.boxed > input[type="tel"],
+   &.boxed > input[type="datetime-local"],
+   &.boxed > input[type="month"],
+   &.boxed > input[type="search"],
+   &.boxed > input[type="week"],
+   &.boxed > input[type="url"] {
       
       width: 100%;
       line-height: $height-m;
