@@ -1,6 +1,6 @@
 {
   "name": "jaeff",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "Just Another Easy Frontend Framework",
   "main": "dist/jaeff.js",
   "scripts": {},
