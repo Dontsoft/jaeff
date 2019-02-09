@@ -36,10 +36,10 @@ $screen-m: 768px !default;
 $screen-l: 1048px !default;
 $screen-xl: 1440px !default;
 $screen-2xl: 1921px !default;
-$screen-s-max: calc(#{$screen-m} - 1) !default;
-$screen-m-max: calc(#{$screen-l} - 1) !default;
-$screen-l-max: calc(#{$screen-xl} - 1) !default;
-$screen-xl-max: calc(#{$screen-2xl} - 1) !default;
+$screen-s-max: $screen-m - 1 !default;
+$screen-m-max: $screen-l - 1 !default;
+$screen-l-max: $screen-xl - 1 !default;
+$screen-xl-max: $screen-2xl - 1 !default;
 
 @import "./functions";
 @import "./icons";
