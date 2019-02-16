@@ -133,13 +133,13 @@ body {
   &.nearly-full-height {
      min-height: 80vh;
      @media screen and (max-height: $screen-m-max) {
-        min-height: $screen-l-max;
+        min-height: $screen-s-max;
      }
   }
   &.full-height {
      min-height: 100vh;
      @media screen and (max-height: $screen-m-max) {
-        min-height: $screen-l-max;
+        min-height: $screen-s-max;
      }
   }
   &.padded {
